@@ -1,5 +1,5 @@
 section#devcon {
-   
+
    overflow:hidden;
 }
 
@@ -10,7 +10,7 @@ article.devcon {
    flex-direction: column;
    justify-content: center;
    align-items:center;
-   
+
    p {
       font-size: 32px;
       padding: 6px 24px;
@@ -18,7 +18,7 @@ article.devcon {
       text-align: justify;
 
    }
-   
+
    img.outside {
       width: 50%;
       position: absolute;
@@ -26,12 +26,12 @@ article.devcon {
       left: 50%;
       margin-left: -35%;
       opacity: 0.25;
-      
+
       transform:rotate(20deg);
 
 
    }
-   
+
    h2.theme {
       font-size: 48px;
       color: $highColor;
@@ -39,11 +39,11 @@ article.devcon {
       text-transform: uppercase;
 
       margin: 12px 0 24px 0;
-         
+
       position: relative;
       display: inline-block;
-      
-      
+
+
       span.the {
          display: inline-block;
          transform: rotate(-90deg);
@@ -53,22 +53,22 @@ article.devcon {
          text-transform: lowercase;
          text-align: center;
       }
-      
+
       span.white {
          display: inline-block;
          color: $textColor;
          position: relative;
          bottom: 15px;
-         
+
       }
-      
+
       span.box {
          border: solid 2px $textColor;
          padding: 0 6px;
          border-radius: 6px;
-         
+
       }
-      
+
       &::before {
          content: "{";
          position: absolute;
@@ -82,7 +82,7 @@ article.devcon {
          align-items: center;
          justify-content:center;
       }
-      
+
       &::after {
          content: "}";
          position: absolute;
@@ -96,24 +96,28 @@ article.devcon {
          align-items: center;
          justify-content:center;
       }
-      
+
    }
-   
+
    @media (max-width: 700px) {
       p {
-         font-size: 24px;
-      }   
-      
+         font-size: 20px;
+      }
+
       h2.theme {
-         font-size: 32px;
-         
+         font-size: 24px;
+
+         span.white {
+           bottom: 7px;
+         }
+
          span.the {
-            width:24px;
-            height:30px;
-            
+            width:16px;
+            height:24px;
+
          }
       }
-      
+
    }
-   
+
 }

@@ -1,33 +1,121 @@
-article.location {
-   padding: 24px;
-   
+article.locations {
    $imgSize: 25%;
    $imgMargin: 3%;
-   
-   img {
+
+
+  div.location {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 12px;
+
+    div.image {
+      flex: 0 0 auto;
       width: $imgSize;
-      border-radius: 40% 10%;
-      box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.25);
-      float: left;
-      
+
+      img {
+        width: 100%;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.25);
+      }
+    }
+
+
+    div.info {
+      flex: 1;
+      padding: 12px;
+
+      h1 {
+        font-size: 24px;
+        margin-bottom: 6px;
+      }
+
+      h2 {
+        font-size: 16px;
+        color: darken($textColor, 40);
+      }
+
+      p {
+        font-size: 14px;
+        margin-bottom: 6px;
+
+        &.address {
+          color: darken($textColor, 30);
+        }
+      }
+    }
+
+
+
+  }
+
+   @media (min-width: 700px) {
+
+    div.location {
+
+      flex-direction: row;
+
+      &.right {
+        flex-direction: row-reverse;
+      }
+
+      div.image {
+        text-align: center;
+
+        img {
+          border-radius: 50% 25%;
+          border-top-right-radius: auto;
+          border-bottom-right-radius: auto;
+          height: 200px;
+          width: auto;
+        }
+      }
+
+      div.info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h1 {
+          font-size: 32px;
+        }
+
+        h2 {
+          font-size: 24px;
+        }
+
+        p {
+          font-size: 18px;
+
+        }
+      }
+
+    }
+     //
+    //  img {
+    //     width: $imgSize;
+    //     border-radius: 40% 10%;
+    //     box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.25);
+    //     float: left;
+     //
+    //  }
+     //
+    //  h1 {
+    //     font-size: 32px;
+    //     margin-left: $imgSize + $imgMargin;
+    //     margin-bottom: 12px;
+    //  }
+     //
+    //  h2 {
+    //     color: darken($textColor, 40);
+    //     font-size: 22px;
+    //     margin-left: $imgSize + $imgMargin;
+    //  }
+     //
+    //  p {
+    //     margin-left: $imgSize + $imgMargin;
+    //     margin-bottom: 12px;
+     //
+    //  }
    }
-   
-   h1 {
-      font-size: 32px;
-      margin-left: $imgSize + $imgMargin;
-            margin-bottom: 12px;
-   }
-   
-   h2 {
-      color: darken($textColor, 40);
-      font-size: 22px;
-      margin-left: $imgSize + $imgMargin;      
-   }
-   
-   p {
-      margin-left: $imgSize + $imgMargin;      
-      margin-bottom: 12px;
-      
-   }
-   
+
 }

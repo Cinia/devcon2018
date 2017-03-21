@@ -3,14 +3,14 @@ header {
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center center;
-   height: 100vh;  
+   height: 100vh;
 
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
    overflow: hidden;
-   
+
    &::after {
       position: absolute;
       content: "";
@@ -21,16 +21,22 @@ header {
       width: 100%;
       background: linear-gradient(transparent 0%, $mainBgColor 100%);
    }
-   
 
-   
+
+
    .logo {
       flex: 0 0 auto;
       width: 100%;
       min-width: 800px;
-      
+
+      @media only screen and (max-width: 800px) {
+        max-width: 100%;
+        min-width: 550px;
+
+      }
+
    }
-   
+
    h1 {
       font-size: 64px;
       position: absolute;
@@ -39,8 +45,13 @@ header {
       top: 65vh;
       height: 64px;
       text-align: center;
+
+      @media only screen and (max-width: 800px) {
+        font-size: 40px;
+        height: 40px;
+      }
    }
-   
+
    h2 {
       font-size: 40px;
       position: absolute;
@@ -50,5 +61,10 @@ header {
       height: 48px;
       color: darken($textColor, 40);
       text-align: center;
+
+      @media only screen and (max-width: 800px) {
+        font-size: 28px;
+        height: 28px;
+      }
    }
 }

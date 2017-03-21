@@ -138,6 +138,10 @@ header {
     flex: 0 0 auto;
     width: 100%;
     min-width: 800px; }
+    @media only screen and (max-width: 800px) {
+      header .logo {
+        max-width: 100%;
+        min-width: 550px; } }
   header h1 {
     font-size: 64px;
     position: absolute;
@@ -146,6 +150,10 @@ header {
     top: 65vh;
     height: 64px;
     text-align: center; }
+    @media only screen and (max-width: 800px) {
+      header h1 {
+        font-size: 40px;
+        height: 40px; } }
   header h2 {
     font-size: 40px;
     position: absolute;
@@ -155,6 +163,10 @@ header {
     height: 48px;
     color: #999999;
     text-align: center; }
+    @media only screen and (max-width: 800px) {
+      header h2 {
+        font-size: 28px;
+        height: 28px; } }
 
 nav {
   position: fixed;
@@ -216,6 +228,10 @@ section {
   padding: 12px;
   padding-top: 54px;
   overflow-x: hidden; }
+  @media only screen and (max-width: 800px) {
+    section {
+      padding: 0;
+      padding-top: 54px; } }
   section::before {
     position: absolute;
     content: "";
@@ -243,11 +259,20 @@ section {
     padding: 32px 0;
     padding-left: 64px;
     border-top: dashed 2px rgba(255, 255, 255, 0.25); }
+    @media only screen and (max-width: 800px) {
+      section > h1 {
+        font-size: 28px;
+        padding-left: 48px; } }
   section > img.icon {
     position: absolute;
     left: 16px;
     top: 86px;
     width: 48px; }
+    @media only screen and (max-width: 800px) {
+      section > img.icon {
+        top: 92px;
+        left: 8px;
+        width: 32px; } }
 
 section#devcon {
   overflow: hidden; }
@@ -322,12 +347,14 @@ article.devcon {
       justify-content: center; }
   @media (max-width: 700px) {
     article.devcon p {
-      font-size: 24px; }
+      font-size: 20px; }
     article.devcon h2.theme {
-      font-size: 32px; }
+      font-size: 24px; }
+      article.devcon h2.theme span.white {
+        bottom: 7px; }
       article.devcon h2.theme span.the {
-        width: 24px;
-        height: 30px; } }
+        width: 16px;
+        height: 24px; } }
 
 article.speakers div.speaker {
   padding: 24px; }
@@ -337,7 +364,7 @@ article.speakers div.speaker {
     float: left;
     box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.25); }
   article.speakers div.speaker h1 {
-    color: white;
+    color: red;
     font-size: 28px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -375,6 +402,68 @@ article.speakers div.speaker {
       width: 300px;
       font-weight: bold; }
 
+article.workshops .workshop {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 192px; }
+  article.workshops .workshop div.image {
+    flex: 0 0 auto;
+    height: 200px;
+    margin-left: -12px;
+    margin-right: -12px;
+    background-color: white;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.5); }
+    article.workshops .workshop div.image img {
+      width: 80%; }
+  article.workshops .workshop div.info {
+    flex: 1;
+    margin: 12px 0 24px 0;
+    padding: 0 12px; }
+    article.workshops .workshop div.info h1 {
+      font-size: 32px;
+      color: red; }
+    article.workshops .workshop div.info p {
+      font-size: 18px; }
+    article.workshops .workshop div.info dl {
+      font-size: 18px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-top: 12px; }
+      article.workshops .workshop div.info dl dt {
+        flex: 0 0 auto;
+        width: 20%;
+        color: #999999; }
+      article.workshops .workshop div.info dl dd {
+        flex: 0 0 auto;
+        width: 80%; }
+  @media only screen and (min-width: 800px) {
+    article.workshops .workshop {
+      flex-direction: row; }
+      article.workshops .workshop.right {
+        flex-direction: row-reverse; }
+      article.workshops .workshop div.image {
+        flex: 0 0 auto;
+        width: 25%;
+        margin-left: 0;
+        margin-right: 0;
+        background-color: transparent;
+        box-shadow: none; }
+        article.workshops .workshop div.image img {
+          border-radius: 50% 25%;
+          height: 90%;
+          width: auto; }
+      article.workshops .workshop .info {
+        flex: 1;
+        padding: 12px; } }
+
 section#timetable {
   background: url("../imgs/bg.png");
   background-position: center center;
@@ -387,26 +476,25 @@ article.timetable {
   align-items: center; }
   article.timetable .slot {
     text-align: center;
-    width: 80%;
-    min-width: 500px;
+    width: 96%;
     margin: 6px 0;
-    padding: 12px 0;
+    padding: 12px;
     background-color: rgba(0, 0, 0, 0.75);
     border-radius: 20px;
     box-shadow: inset 0 0 8px 4px rgba(255, 64, 64, 0.15); }
     article.timetable .slot h2 {
       color: #999999;
-      font-size: 22px;
+      font-size: 18px;
       font-weight: bold; }
     article.timetable .slot h1 {
       color: white;
-      font-size: 32px;
+      font-size: 24px;
       text-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.75);
-      background-color: rgba(0, 0, 0, 0.25);
+      margin: 6px 0;
       font-weight: bold; }
     article.timetable .slot h3 {
       color: #999999;
-      font-size: 20px;
+      font-size: 16px;
       font-style: italic;
       font-weight: bold; }
   article.timetable .transport {
@@ -422,7 +510,7 @@ article.timetable {
       flex-direction: row;
       flex-wrap: wrap;
       flex: 1;
-      font-size: 20px;
+      font-size: 16px;
       margin: 12px 6px; }
       article.timetable .transport dl dt {
         color: #999999;
@@ -436,25 +524,67 @@ article.timetable {
         width: 80%;
         text-align: left;
         padding-left: 24px; }
+  @media only screen and (min-width: 700px) {
+    article.timetable .slot {
+      width: 90%; }
+      article.timetable .slot h1 {
+        font-size: 32px; }
+      article.timetable .slot h2 {
+        font-size: 24px; }
+      article.timetable .slot h3 {
+        font-size: 22px; }
+    article.timetable .transport dl {
+      font-size: 24px; } }
 
-article.location {
-  padding: 24px; }
-  article.location img {
-    width: 25%;
-    border-radius: 40% 10%;
-    box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.25);
-    float: left; }
-  article.location h1 {
-    font-size: 32px;
-    margin-left: 28%;
-    margin-bottom: 12px; }
-  article.location h2 {
-    color: #999999;
-    font-size: 22px;
-    margin-left: 28%; }
-  article.location p {
-    margin-left: 28%;
-    margin-bottom: 12px; }
+article.locations div.location {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 12px; }
+  article.locations div.location div.image {
+    flex: 0 0 auto;
+    width: 25%; }
+    article.locations div.location div.image img {
+      width: 100%;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+      box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.25); }
+  article.locations div.location div.info {
+    flex: 1;
+    padding: 12px; }
+    article.locations div.location div.info h1 {
+      font-size: 24px;
+      margin-bottom: 6px; }
+    article.locations div.location div.info h2 {
+      font-size: 16px;
+      color: #999999; }
+    article.locations div.location div.info p {
+      font-size: 14px;
+      margin-bottom: 6px; }
+      article.locations div.location div.info p.address {
+        color: #b3b3b3; }
+@media (min-width: 700px) {
+  article.locations div.location {
+    flex-direction: row; }
+    article.locations div.location.right {
+      flex-direction: row-reverse; }
+    article.locations div.location div.image {
+      text-align: center; }
+      article.locations div.location div.image img {
+        border-radius: 50% 25%;
+        border-top-right-radius: auto;
+        border-bottom-right-radius: auto;
+        height: 200px;
+        width: auto; }
+    article.locations div.location div.info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      article.locations div.location div.info h1 {
+        font-size: 32px; }
+      article.locations div.location div.info h2 {
+        font-size: 24px; }
+      article.locations div.location div.info p {
+        font-size: 18px; } }
 
 footer.main {
   position: relative;
