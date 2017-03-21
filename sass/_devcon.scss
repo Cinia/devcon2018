@@ -1,0 +1,119 @@
+section#devcon {
+   
+   overflow:hidden;
+}
+
+article.devcon {
+
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items:center;
+   
+   p {
+      font-size: 32px;
+      padding: 6px 24px;
+      width: 90%;
+      text-align: justify;
+
+   }
+   
+   img.outside {
+      width: 50%;
+      position: absolute;
+      top: 0px;
+      left: 50%;
+      margin-left: -35%;
+      opacity: 0.25;
+      
+      transform:rotate(20deg);
+
+
+   }
+   
+   h2.theme {
+      font-size: 48px;
+      color: $highColor;
+      font-weight: bold;
+      text-transform: uppercase;
+
+      margin: 12px 0 24px 0;
+         
+      position: relative;
+      display: inline-block;
+      
+      
+      span.the {
+         display: inline-block;
+         transform: rotate(-90deg);
+         width: 48px;
+         font-size: 0.75em;
+         height: 32px;
+         text-transform: lowercase;
+         text-align: center;
+      }
+      
+      span.white {
+         display: inline-block;
+         color: $textColor;
+         position: relative;
+         bottom: 15px;
+         
+      }
+      
+      span.box {
+         border: solid 2px $textColor;
+         padding: 0 6px;
+         border-radius: 6px;
+         
+      }
+      
+      &::before {
+         content: "{";
+         position: absolute;
+         top: 0;
+         left: -20px;
+         bottom: 0;
+         width: 20px;
+         color: $textColor;
+         font-size: 0.75em;
+         display: flex;
+         align-items: center;
+         justify-content:center;
+      }
+      
+      &::after {
+         content: "}";
+         position: absolute;
+         top: 0;
+         right: -20px;
+         bottom: 0;
+         width: 20px;
+         color: $textColor;
+         font-size: 0.75em;
+         display: flex;
+         align-items: center;
+         justify-content:center;
+      }
+      
+   }
+   
+   @media (max-width: 700px) {
+      p {
+         font-size: 24px;
+      }   
+      
+      h2.theme {
+         font-size: 32px;
+         
+         span.the {
+            width:24px;
+            height:30px;
+            
+         }
+      }
+      
+   }
+   
+}

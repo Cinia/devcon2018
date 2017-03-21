@@ -1,0 +1,45 @@
+
+$colWidth: 450px;
+
+@mixin createColumns($columns, $span:$colWidth) {
+   
+   @media (min-width: $columns * $span) {
+      
+      @for $i from 1 through $columns {
+         
+         .col-#{$i} {
+            flex-grow: 0;
+            flex-shrink: $i;
+            flex-basis: auto;
+            width: 100% / $columns;
+         }
+         
+      }
+   }   
+   
+}
+
+.grid {
+   
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   
+   & > .col-1,
+   & > .col-2,
+   & > .col-3,
+   & > .col-4,
+   & > .col-full {
+      flex: 1 1 auto;
+      width: 100%;
+      order: 1;
+   }
+
+   
+   @include createColumns(2);
+   @include createColumns(3);
+   @include createColumns(4);
+   @include createColumns(5);
+   
+   
+}
