@@ -1,0 +1,42 @@
+
+section.timetable {
+
+
+  table {
+    width: 100%;
+
+    tr {
+
+
+      td, th {
+        padding: 12px 3px;
+      }
+
+      .when {
+        width: 120px;
+        text-align: left;
+      }
+
+      .who {
+        width: 200px;
+        text-align: left;
+      }
+
+      .what {
+        width: auto;
+        text-align: left;
+      }
+
+
+    }
+
+
+    tbody {
+      tr {
+        &:nth-child(even) {
+          background-color: rgba(0,0,0,0.05);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css?family=Arimo|Cabin|Josefin+Sans|Poppins");
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box; }
+
+body {
+  background-color: #E8F0FF;
+  color: #000810;
+  font-family: "Cabin", "Verdana", "Arial", Sans;
+  display: flex;
+  flex-direction: column; }
+  body section {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    min-height: 100vh;
+    padding-top: 60px;
+    background: linear-gradient(to bottom, #D8E0EF 0, #E8F0FF 5%, #E8F0FF 95%, #D8E0EF 100%); }
+    body section > div.container {
+      width: 100%;
+      margin-left: 0;
+      padding: 0 6px; }
+      @media screen and (min-width: 768px) {
+        body section > div.container {
+          width: 94%;
+          margin-left: 3%;
+          padding: 0 6px; } }
+      @media screen and (min-width: 1024px) {
+        body section > div.container {
+          width: 1024px;
+          margin-left: 0;
+          padding: 0; } }
+  body h1 {
+    font-family: "Josefin Sans", "Verdana", "Arial", Sans;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 5px;
+    margin: 24px 0 6px 0;
+    padding: 0 12px;
+    border-bottom: double 5px rgba(0, 0, 64, 0.05); }
+
+nav {
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.1); }
+  nav div.logo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    nav div.logo img {
+      height: 54px; }
+  nav ul {
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    height: 100%; }
+    nav ul li {
+      flex: 1;
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase; }
+      nav ul li a {
+        color: white;
+        text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        text-decoration: none; }
+
+section.banner {
+  height: 100vh;
+  background: url("../imgs/background.jpg") no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  section.banner:after {
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(to bottom, transparent 0%, rgba(68, 102, 187, 0.5) 80%, #D8E0EF 100%); }
+  section.banner div.logo {
+    width: 80%;
+    height: 80vh;
+    background: url("../imgs/logo.png") no-repeat;
+    background-position: center center;
+    background-size: contain; }
+
+section.architecture {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  section.architecture div.title {
+    width: 80%;
+    height: 80vh;
+    background: url("../imgs/title.png") no-repeat;
+    background-position: center center;
+    background-size: contain; }
+
+section.timetable table {
+  width: 100%; }
+  section.timetable table tr td, section.timetable table tr th {
+    padding: 12px 3px; }
+  section.timetable table tr .when {
+    width: 120px;
+    text-align: left; }
+  section.timetable table tr .who {
+    width: 200px;
+    text-align: left; }
+  section.timetable table tr .what {
+    width: auto;
+    text-align: left; }
+  section.timetable table tbody tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.05); }
+
+/*# sourceMappingURL=style.css.map */
