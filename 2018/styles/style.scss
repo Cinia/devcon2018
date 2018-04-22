@@ -10,7 +10,7 @@
 
 // Variables
 
-$mobileWidth: 768px;
+$mobileWidth: 480px;
 $wideWidth: 1024px;
 
 $mainColor: #4466BB;
@@ -75,20 +75,91 @@ body {
 
   }
 
+  footer {
+    height: 128px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $darkerBg;
+  }
+
   h1 {
     font-family: $headerFont;
     font-size: 2.5rem;
     text-transform: uppercase;
     font-weight:400;
     letter-spacing: 5px;
-    margin: 24px 0 6px 0;
+    margin: 24px 0 12px 0;
     padding: 0 12px;
     border-bottom: double 5px rgba(0,0,64,0.05);
+
+    @media screen and (max-width: $mobileWidth) {
+      font-size: 1.6rem;
+    }
   }
+
+
+  h2 {
+    font-family: $headerFont;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: normal;
+    margin: 3px 0 6px 0;
+
+    @media screen and (max-width: $mobileWidth) {
+      font-size: 1.4rem;
+    }
+  }
+
+  h3 {
+    font-family: $headerFont;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: normal;
+    color: rgba(0,0,0,0.8);
+
+    @media screen and (max-width: $mobileWidth) {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+
+.box-grid {
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .box {
+    flex: 1 1 auto;
+    width: 100%;
+
+    @media screen and (min-width: $mobileWidth) {
+      flex: 1 0 auto;
+      width: 50%;
+      min-width: 400px;
+
+    }
+
+    @media screen and (min-width: $wideWidth) {
+      width: 50%;
+    }
+
+
+
+  }
+
 }
 
 
 @import "nav";
 @import "banner";
 
+@import "speakers";
+@import "workshops";
 @import "timetable";
+
+@import "location";

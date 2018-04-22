@@ -18,90 +18,329 @@
         <img src="./imgs/logo.png" alt="DEVcon 2018">
     </div>
     <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#speakers">Speakers</a></li>
-        <li><a href="#workshops">Workshops</a></li>
-        <li><a href="#timetable">Timetable</a></li>
-        <li><a href="#location">Location</a></li>
+        <li><a class="menulink" href="#home">Home</a></li>
+        <li><a class="menulink" href="#speakers">Presentations</a></li>
+        <li><a class="menulink" href="#workshops">Workshops</a></li>
+        <li><a class="menulink" href="#timetable">Timetable</a></li>
+        <li><a class="menulink" href="#location">Location</a></li>
     </ul>
+
+
 </nav>
 
+<div class="open-menu" id="burgerMenu">
+    <img src="./imgs/burger.svg" alt="Menu" class="burger-menu">
+</div>
 
-<section class="banner" id="home">
-    <div class="logo">
-
-    </div>
-</section>
-
-<section class="architecture">
-    <div class="title">
-
-    </div>
-</section>
-
-<section class="speakers" id="speakers">
-    <div class="container">
-        <h1>Speakers</h1>
-    </div>
-</section>
+<div class="page">
 
 
-<section class="workshops" id="workshops">
-    <div class="container">
-        <h1>Workshops</h1>
-    </div>
-</section>
+    <section class="banner" id="home">
 
-<section class="timetable" id="timetable">
-    <div class="container">
-        <h1>Timetable</h1>
+        <div class="anim-container"  id="devconLogo">
 
-        <table>
-            <thead>
+            <img src="./imgs/logo.png" alt="DEVcon 2018">
+
+        </div>
+
+        <div class="anim-container hidden"  id="devconTitle">
+            <img src="./imgs/title.png" alt="Title">
+        </div>
+
+    </section>
+
+    <section class="speakers" id="speakers">
+        <div class="container">
+            <h1>Presentations</h1>
+
+            <div class="box-grid presentations">
+                <div class="box speak keynote">
+                    <h3>Kontena</h3>
+                    <h2>Containers and their advantages</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In auctor diam nec ex sagittis euismod. Aliquam consequat vehicula nisi sit amet congue. Curabitur posuere ex id lacus ultricies, eget imperdiet lectus sodales. Aenean vestibulum nulla quis mauris pellentesque, at interdum risus consectetur. Curabitur a aliquam eros, pharetra vulputate orci. </p>
+
+                </div>
+
+                <div class="box speak">
+                    <h3>Sallinen</h3>
+                    <h2>Cloud Services</h2>
+                    <p>AWS, LionCloud, GoogleCloud? How to choose the right cloud service for your project.</p>
+
+                </div>
+
+                <div class="box speak">
+                    <h3>Jakonen</h3>
+                    <h2>CI / CD services</h2>
+                    <p>In auctor diam nec ex sagittis euismod. Aliquam consequat vehicula nisi sit amet congue. </p>
+
+                </div>
+
+                <div class="box speak">
+                    <h3>Open</h3>
+                    <h2>Robotic process automation</h2>
+                    <p>What does this really mean? What is behind the hype? What this has to do with anything that I do?</p>
+
+                </div>
+
+                <div class="box speak">
+                    <h3>Henrik Collin</h3>
+                    <h2>React State Containers</h2>
+                    <p>Overview of pros and cons of different Redux, Mobx and Mobx State Tree for React. When to use what and why and does it really even matter.</p>
+
+                </div>
+
+                <div class="box speak">
+                    <h3>Kuorelahti / Riku Lindblad</h3>
+                    <h2>Microservices architecture</h2>
+                    <p>Cras accumsan nisl a sapien dapibus, viverra viverra turpis gravida. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse ut ante ultrices, hendrerit ex eget, maximus est. Etiam ut rutrum dolor, nec egestas purus. In nulla ipsum, tristique eu aliquam ut, hendrerit id elit. Quisque viverra scelerisque ipsum. Phasellus erat sapien, varius id massa non, eleifend maximus lorem. Cras sit amet orci a felis faucibus mollis. Donec pretium tristique augue.</p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </section>
+
+
+    <section class="workshops" id="workshops">
+        <div class="container">
+            <h1>Workshops</h1>
+
+            <p>Workshops are held in the afternoon and they are mainly running for the two hours. You can choose to attend any of them as you wish and switch between workshops during the event.</p>
+
+            <div class="box-grid">
+
+                <div class="box workshop">
+                    <h3>LionCloud Team</h3>
+                    <h2>LionCloud Hands-On</h2>
+                    <p>Hands on tutorial on how to setup LionCloud service for you project. Bring your own laptop to get the full advantage!</p>
+                </div>
+
+                <div class="box workshop">
+                    <h3>Talvitie</h3>
+                    <h2>Service Design in practise</h2>
+                    <p>TBA</p>
+                </div>
+
+                <div class="box workshop">
+                    <h3>Henrik Collin</h3>
+                    <h2>Common Modules Questionary</h2>
+                    <p>Come and answer to the burning question of what should be included in our common libraries and modules? What do you really need?</p>
+                </div>
+
+                <div class="box workshop">
+                    <h3>Jakonen</h3>
+                    <h2>How CI/CD solves my problems?</h2>
+                    <p>Come and talk to our Devops team and they will help you with your CI/CD problems. Need advice or just tips and tricks? We are here to make your project infra more sane.</p>
+                </div>
+
+                <div class="box workshop">
+                    <h3>Saku Tihveräinen</h3>
+                    <h2>Cinia Employer Image</h2>
+                    <p>Discussions and feedback for the HR on how to improve our employer image for both new recruits and seasoned code veterans alike. What are the key interests of engineer? Does location change the priorities?</p>
+                </div>
+
+                <div class="box workshop">
+                    <h3>You?</h3>
+                    <h2>Free space</h2>
+                    <p>Are you interested in keeping a workshop? Maybe a code clinic or quick hands-on on some new tech?
+                        Is there a project you have worked on and want to show it to the rest?
+                        Has your project been such a disaster that you just need to give a warning of the pitfalls?
+                        Just contact the organizers (Ilona @HKI, Henrik @TRE and Riku @JKY) and let's make it happen.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="timetable" id="timetable">
+        <div class="container">
+            <h1>Timetable</h1>
+
+            <table>
+                <thead>
                 <tr>
                     <th class="when">When</th>
+                    <th class="type"> </th>
                     <th class="who">Who</th>
                     <th class="what">What</th>
                 </tr>
-            </thead>
-            
-            <tbody>
-                <tr>
-                    <td>0900 - 0915</td>
-                    <td>Kimmo Ja Petri</td>
-                    <td>Welcome to DEVcon 2018</td>
+                </thead>
+
+                <tbody>
+                <tr class="food">
+                    <td>0830 - 0900</td>
+                    <td><img src="./imgs/coffee.svg" class="type-icon"/></td>
+                    <td> </td>
+                    <td>Breakfast</td>
                 </tr>
 
-                <tr>
+                <tr class="info">
                     <td>0900 - 0915</td>
-                    <td>Kimmo Ja Petri</td>
-                    <td>Welcome to DEVcon 2018</td>
+                    <td><img src="./imgs/info.svg" class="type-icon"/></td>
+                    <td>Alamartimo</td>
+                    <td>Welcome to DEVcon</td>
                 </tr>
 
-                <tr>
-                    <td>0900 - 0915</td>
-                    <td>Kimmo Ja Petri</td>
-                    <td>Welcome to DEVcon 2018</td>
+                <tr class="speak">
+                    <td>0915 - 0945</td>
+                    <td><img src="./imgs/speak.svg" class="type-icon"/></td>
+                    <td>Sallinen</td>
+                    <td>Cloud Services</td>
                 </tr>
 
-                <tr>
-                    <td>0900 - 0915</td>
-                    <td>Kimmo Ja Petri</td>
-                    <td>Welcome to DEVcon 2018</td>
+                <tr class="speak">
+                    <td>0945 - 1015</td>
+                    <td><img src="./imgs/speak.svg" class="type-icon"/></td>
+                    <td>Jakonen</td>
+                    <td>CI/CD services</td>
                 </tr>
-            
-            </tbody>
-            
 
-        </table>
-    </div>
-</section>
+                <tr class="break">
+                    <td>1015 - 1030</td>
+                    <td><img src="./imgs/break.svg" class="type-icon"/></td>
+                    <td> </td>
+                    <td>Break</td>
+                </tr>
 
-<section class="location" id="location">
-    <div class="container">
-        <h1>Location</h1>
-    </div>
-</section>
+                <tr class="speak">
+                    <td>1030 - 1100</td>
+                    <td><img src="./imgs/speak.svg" class="type-icon"/></td>
+                    <td>Open</td>
+                    <td>Robotic process automation</td>
+                </tr>
+
+                <tr class="speak">
+                    <td>1100 - 1130</td>
+                    <td><img src="./imgs/speak.svg" class="type-icon"/></td>
+                    <td>Collin</td>
+                    <td>React State Containers</td>
+                </tr>
+
+                <tr class="speak">
+                    <td>1130 - 1200</td>
+                    <td><img src="./imgs/speak.svg" class="type-icon"/></td>
+                    <td>Lindblad / Kuorelahti</td>
+                    <td>Microservices architecture</td>
+                </tr>
+
+                <tr class="food">
+                    <td>1200 - 1300</td>
+                    <td><img src="./imgs/meal.svg" class="type-icon"/></td>
+                    <td> </td>
+                    <td>Lunch</td>
+                </tr>
+
+                <tr class="keynote">
+                    <td>1300 - 1400</td>
+                    <td><img src="./imgs/speak.svg" class="type-icon"/></td>
+                    <td>Kontena</td>
+                    <td>Containers and their advantages</td>
+                </tr>
+
+                <tr class="info">
+                    <td>1400 - 1600</td>
+                    <td><img src="./imgs/jigsaw.svg" class="type-icon"/></td>
+                    <td> </td>
+                    <td>Workshops</td>
+                </tr>
+
+                <tr class="food">
+                    <td>1430</td>
+                    <td><img src="./imgs/coffee.svg" class="type-icon"/></td>
+                    <td> </td>
+                    <td>Coffee on the fly</td>
+                </tr>
+
+                <tr class="workshop">
+                    <td></td>
+                    <td><img src="./imgs/jigsaw.svg" class="type-icon"/></td>
+                    <td>Sallinen / Tervaskari</td>
+                    <td>LionCloud How-To</td>
+                </tr>
+
+                <tr class="workshop">
+                    <td></td>
+                    <td><img src="./imgs/jigsaw.svg" class="type-icon"/></td>
+                    <td>Collin</td>
+                    <td>Common Modules questionary</td>
+                </tr>
+
+                <tr class="workshop">
+                    <td></td>
+                    <td><img src="./imgs/jigsaw.svg" class="type-icon"/></td>
+                    <td>Talvitie</td>
+                    <td>Service Design in practise</td>
+                </tr>
+                <tr class="workshop">
+                    <td></td>
+                    <td><img src="./imgs/jigsaw.svg" class="type-icon"/></td>
+                    <td>Jakonen</td>
+                    <td>How CI / CD solves my problems?</td>
+                </tr>
+                <tr class="workshop">
+                    <td></td>
+                    <td><img src="./imgs/jigsaw.svg" class="type-icon"/></td>
+                    <td>Tihveräinen</td>
+                    <td>Cinia Employment image - What interests the engineer?</td>
+                </tr>
+
+                <tr class="food">
+                    <td>1600 - 1615</td>
+                    <td><img src="./imgs/info.svg" class="type-icon"/></td>
+                    <td>Organizers</td>
+                    <td>Thank you!</td>
+                </tr>
+
+
+                <tr class="party">
+                    <td>1600 - </td>
+                    <td><img src="./imgs/beer.svg" class="type-icon"/></td>
+                    <td>Party animals</td>
+                    <td>Unofficial afterparty</td>
+                </tr>
+
+                </tbody>
+
+
+            </table>
+        </div>
+    </section>
+
+    <section class="location" id="location">
+        <div class="container">
+            <h1>Location</h1>
+
+            <div class="image-container">
+                <img src="./imgs/ballroom.jpeg" alt="Ballroom, Hotel Ilves" />
+            </div>
+
+            <p>This year the DEVcon is held at Hotel Ilves in Tampere on 10.5.2018. The venue will be the Ballroom hall.</p>
+
+
+            <h2>Address</h2>
+
+            <div class="image-container">
+                <img src="./imgs/map.jpeg" alt="Map to Ilves" />
+            </div>
+
+            <p class="address">
+                Hatanpään valtatie 1<br />
+                33100 Tampere
+            </p>
+
+        </div>
+    </section>
+
+    <footer>
+        &copy; Cinia Oy 2018
+    </footer>
+
+</div>
+
+
+<script src="./main.js"></script>
 
 </body>
 </html>
