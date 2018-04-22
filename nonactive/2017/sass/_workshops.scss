@@ -1,0 +1,101 @@
+article.workshops {
+
+  $imgSize: 25%;
+  $imgMargin: 3%;
+
+  .workshop {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    min-height: 192px;
+
+    div.image {
+      flex: 0 0 auto;
+      height: 200px;
+      margin-left: -12px;
+      margin-right: -12px;
+      background-color: white;
+      text-align: center;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 8px 4px rgba(255,255,255,0.5);
+
+      img {
+        width: 80%;
+      }
+
+    }
+
+    div.info {
+      flex: 1;
+      margin: 12px 0 24px 0;
+      padding: 0 12px;
+
+      h1 {
+        font-size: 32px;
+        color: $highColor;
+
+      }
+
+      p {
+        font-size: 18px;
+      }
+
+      dl {
+        font-size: 18px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 12px;
+
+        dt {
+          flex: 0 0 auto;
+          width: 20%;
+          color: darken($textColor, 40);
+        }
+
+        dd {
+          flex: 0 0 auto;
+          width: 80%;
+        }
+      }
+    }
+
+
+    @media only screen and (min-width: 800px) {
+      flex-direction: row;
+
+      &.right {
+        flex-direction: row-reverse;
+      }
+
+      div.image {
+        flex: 0 0 auto;
+        width: 25%;
+        margin-left: 0;
+        margin-right: 0;
+        background-color: transparent;
+        box-shadow: none;
+
+        img {
+          border-radius: 50% 25%;
+          height: 90%;
+          width: auto;
+
+        }
+      }
+
+      .info {
+        flex: 1;
+        padding: 12px;
+
+      }
+
+    }
+  }
+}

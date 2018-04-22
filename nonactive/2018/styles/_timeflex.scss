@@ -1,0 +1,219 @@
+
+section.timeflex {
+
+  div.flextable {
+
+    display: flex;
+    flex-direction: column;
+
+    header {
+      display: none;
+    }
+
+    div.row {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin: 12px 0;
+
+      margin-left: 64px;
+      position: relative;
+
+      div.when {
+        flex: 0 0 auto;
+        width: 80px;
+        font-size: 0.8em;
+
+        display: flex;
+        align-items: center;
+      }
+
+      div.who {
+        flex: 1 1 auto;
+        min-width: 200px;
+
+        font-size: 0.9em;
+        text-transform: uppercase;
+
+
+      }
+
+      div.type {
+        position: absolute;
+        top: 0;
+        left: -64px;
+
+        img {
+          width: 50px;
+          padding: 5px;
+
+
+        }
+
+      }
+
+      div.what {
+        flex: 2 2 auto;
+        width: 100%;
+
+        padding-top: 6px;
+        font-weight: bold;
+      }
+
+      &.food {
+        div.type > img {
+          background-color: $foodColor;
+        }
+      }
+
+      &.speak, &.keynote {
+        div.type > img {
+          background-color: $speakColor;
+        }
+      }
+
+      &.info{
+        div.type > img {
+          background-color: $infoColor;
+        }
+      }
+
+      &.workshop{
+        div.type > img {
+          background-color: $workshopColor;
+        }
+      }
+
+      &.break, &.party {
+        div.type > img {
+          background-color: $freeTimeColor;
+        }
+      }
+
+    }
+
+
+    @media screen and (min-width: $mobileWidth + 300) {
+
+
+      header, div.row {
+
+        flex-wrap: nowrap;
+
+        div.when {
+          flex: 0 0 auto;
+          width: 120px;
+        }
+
+        div.type{
+          position: relative;
+          left: 0;
+          flex: 0 0 auto;
+          width: 60px;
+        }
+
+        div.who {
+          flex: 0 0 auto;
+          width: 200px;
+        }
+
+        div.what {
+          flex: 1 1 auto;
+          width: auto;
+        }
+      }
+
+
+      header {
+
+        display: flex;
+        flex-direction: row;
+        height: 48px;
+        margin-bottom: 6px;
+        padding-bottom: 3px;
+
+        align-items: flex-end;
+        justify-content: flex-start;
+
+        border-bottom: solid 2px rgba(0, 0, 0, 0.1);
+
+        div {
+          font-size: 0.8em;
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+
+      }
+
+
+      div.row {
+        margin: 6px 0 6px 0;
+
+        &:nth-child(odd) {
+          background-color: rgba(128,128,196,0.07);
+        }
+
+        div {
+          display: flex;
+          align-items: center;
+          height: 48px;
+
+
+          &.type {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+              width: 40px;
+            }
+          }
+          &.who, &.what {
+            text-transform: none;
+            font-size: 1em;
+            font-weight: normal;
+          }
+        }
+
+
+        &.speak {
+
+          div.what, div.who {
+            font-size: 1.3rem;
+          }
+        }
+
+        &.keynote {
+
+          div.what, div.who {
+            font-size: 1.3rem;
+            font-weight:bold;
+          }
+        }
+
+        &.workshop {
+
+          div.what, div.who {
+            font-size: 1.3rem;
+          }
+        }
+
+        &.party, &.break, &.info, &.food{
+          height: 32px;
+          color: rgba(0,0,0,0.8);
+
+          & > div {
+            height: 32px;
+          }
+
+          div.type > img {
+            width: 30px;
+          }
+        }
+
+      }
+    }
+
+  }
+
+
+}

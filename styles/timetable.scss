@@ -1,0 +1,121 @@
+
+section.timetable {
+
+
+  padding-bottom: 120px;
+
+  table {
+    width: 100%;
+
+    tr {
+
+
+      td, th {
+        padding: 12px 3px;
+
+        &:nth-child(2) {
+            text-align: center;
+          }
+      }
+
+      .when {
+        width: 120px;
+        text-align: left;
+      }
+
+      .type {
+        width: 60px;
+        text-align: center;
+      }
+
+      .who {
+        width: 200px;
+        text-align: left;
+      }
+
+      .what {
+        width: auto;
+        text-align: left;
+      }
+
+
+    }
+
+
+    tbody {
+      tr {
+
+
+        .type-icon {
+          height: 50px;
+          padding: 6px;
+          border-radius: 50%;
+          background-color: rgba(0,0,0,0.8);
+        }
+
+
+
+        &.break {
+          //background-color: rgba(128,128,128,0.1);
+
+        }
+
+        &.info, &.break,  &.food {
+          //background-color: rgba(128,128,128,0.1);
+
+          td {
+            padding: 0 3px;
+
+            &:nth-child(2) {
+              text-align: center;
+            }
+
+            .type-icon {
+              height: 40px;
+              background-color: rgba(0,0,0,0.4);
+            }
+          }
+
+        }
+
+        &.food {
+          img.type-icon {
+            height: 40px;
+            background-color: rgba(0,128,0,0.4);
+
+          }
+        }
+
+        &.speak {
+          font-size: 1.3em;
+        }
+
+        &.workshop {
+          font-size: 1.3em;
+        }
+
+        &.keynote{
+          font-size: 1.3em;
+          font-weight: bold;
+        }
+
+        &.party {
+          font-size: 0.8em;
+          img.type-icon {
+            height: 35px;
+          }
+        }
+
+        td:first-of-type {
+          font-size: 1rem;
+          font-weight: normal;
+        }
+
+
+
+
+
+      }
+    }
+  }
+}
