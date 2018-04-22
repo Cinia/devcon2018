@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=Arimo|Cabin|Josefin+Sans|Poppins');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+// Variables
+
+$mobileWidth: 480px;
+$wideWidth: 1024px;
+
+$mainColor: #4466BB;
+$secColor: #44CC88;
+
+$lighterBg: #F0FAFF;
+$mainBg: #E8F0FF;
+$darkerBg: #D8E0EF;
+$textColor: #000810;
+
+
+$speakColor: rgba(68,102,187,0.2);
+$workshopColor: rgba(187,187,68,0.2);
+$foodColor: rgba(68,187,102,0.2);
+$infoColor: rgba(102,102,102,0.2);
+$freeTimeColor: rgba(187,102,102, 0.2);
+
+$mainFont: "Cabin", "Verdana", "Arial", Sans;
+$headerFont: "Josefin Sans", "Verdana", "Arial",Sans;
+
+body {
+  background-color: $mainBg;
+  color: $textColor;
+  font-family: $mainFont;
+
+  display: flex;
+  flex-direction: column;
+
+  section {
+    position: relative;
+    flex: 1;
+
+    display: flex;
+    justify-content: space-around;
+
+    min-height: 100vh;
+    padding-top: 60px;
+
+    background: linear-gradient(to bottom, $darkerBg 0, $mainBg 5%, $mainBg 95%, $darkerBg 100% );
+
+    //border-bottom: solid 6px rgba(0,0,0,0.2);
+
+    & > div.container {
+
+      //border-top: solid 3px saddlebrown;
+
+      width: 100%;
+      margin-left: 0;
+      padding: 0 6px;
+
+
+      @media screen and (min-width: $mobileWidth) {
+        width: 94%;
+        margin-left: 3%;
+        //border-top: solid 3px pink;
+        padding: 0 6px;
+
+      }
+
+      @media screen and (min-width: $wideWidth ) {
+        width: $wideWidth;
+        margin-left: 0;
+        //border-top: solid 3px greenyellow;
+        padding: 0;
+      }
+
+
+    }
+
+  }
+
+  div.page  > footer {
+    height: 128px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $darkerBg;
+  }
+
+  h1 {
+    font-family: $headerFont;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight:400;
+    letter-spacing: 5px;
+    margin: 24px 0 12px 0;
+    padding: 0 12px;
+    border-bottom: double 5px rgba(0,0,64,0.05);
+
+    @media screen and (max-width: $mobileWidth) {
+      font-size: 1.6rem;
+    }
+  }
+
+
+  h2 {
+    font-family: $headerFont;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: normal;
+    margin: 3px 0 6px 0;
+
+    @media screen and (max-width: $mobileWidth) {
+      font-size: 1.4rem;
+    }
+  }
+
+  h3 {
+    font-family: $headerFont;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: normal;
+    color: rgba(0,0,0,0.8);
+
+    @media screen and (max-width: $mobileWidth) {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+
+.box-grid {
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .box {
+    flex: 1 1 auto;
+    width: 100%;
+
+    @media screen and (min-width: $mobileWidth) {
+      flex: 1 0 auto;
+      width: 50%;
+      min-width: 400px;
+
+    }
+
+    @media screen and (min-width: $wideWidth) {
+      width: 50%;
+    }
+
+
+
+  }
+
+}
+
+
+@import "nav";
+@import "banner";
+
+@import "speakers";
+@import "workshops";
+@import "timeflex";
+@import "timetable";
+
+@import "location";
