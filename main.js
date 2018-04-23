@@ -1,7 +1,5 @@
 
 (function() {
-    console.log("Loaded!");
-
 
     function classAnimation(elems, waitinms) {
 
@@ -13,7 +11,7 @@
             elems.forEach((elem, ind) => {
                 if(ind === current) {
                     elem.classList.remove("hidden");
-                    console.log("Show:", current, elem.classList);
+                    //console.log("Show:", current, elem.classList);
                 } else {
                     elem.classList.add("hidden");
                 }
@@ -36,7 +34,7 @@
 
 
     document.querySelector("#burgerMenu").addEventListener('click', (e) => {
-        console.log("CLICK!");
+        //console.log("CLICK!");
         document.querySelector("nav").classList.toggle("hidden");
 
     });
@@ -44,7 +42,7 @@
 
     window.addEventListener('click', (e) => {
         const elem = e.target;
-        console.log("CLICK on window!", elem.classList.contains("burger-menu"));
+        //console.log("CLICK on window!", elem.classList.contains("burger-menu"));
         if(!elem.classList.contains("burger-menu")) {
             const navigation = document.querySelector("nav");
             if(!navigation.classList.contains("hidden")) {
