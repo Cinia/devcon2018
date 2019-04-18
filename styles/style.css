@@ -6,8 +6,8 @@
   box-sizing: border-box; }
 
 body {
-  background-color: #E8F0FF;
-  color: #000810;
+  background-color: #f4efec;
+  color: #120000;
   font-family: "Cabin", "Verdana", "Arial", Sans;
   display: flex;
   flex-direction: column; }
@@ -18,7 +18,7 @@ body {
     justify-content: space-around;
     min-height: 100vh;
     padding-top: 60px;
-    background: linear-gradient(to bottom, #D8E0EF 0, #E8F0FF 5%, #E8F0FF 95%, #D8E0EF 100%); }
+    background: linear-gradient(to bottom, #b1afa3 0, #f4efec 5%, #f4efec 95%, #b1afa3 100%); }
     body section > div.container {
       width: 100%;
       margin-left: 0;
@@ -38,7 +38,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #D8E0EF; }
+    background: #b1afa3; }
   body h1 {
     font-family: "Josefin Sans", "Verdana", "Arial", Sans;
     font-size: 2.5rem;
@@ -182,7 +182,7 @@ div.open-menu {
 section.banner {
   height: 100vh;
   position: relative;
-  background: url("../imgs/background.jpg") no-repeat;
+  background: url("../imgs/logo2019.jpg") no-repeat;
   background-position: center center;
   -webkit-background-size: cover;
   background-size: cover; }
@@ -193,7 +193,7 @@ section.banner {
     left: 0;
     width: 100%;
     height: 40%;
-    background: linear-gradient(to bottom, transparent 0%, rgba(68, 102, 187, 0.5) 80%, #D8E0EF 100%); }
+    background: linear-gradient(to bottom, transparent 0%, rgba(74, 61, 52, 0.5) 80%, #b1afa3 100%); }
   section.banner div.anim-container {
     position: absolute;
     top: 0;
