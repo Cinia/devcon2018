@@ -56,7 +56,7 @@ section.timeflex {
         flex: 2 2 auto;
         width: 100%;
 
-        padding-top: 6px;
+        //padding-top: 6px;
         font-weight: bold;
       }
 
@@ -121,6 +121,11 @@ section.timeflex {
           flex: 1 1 auto;
           width: auto;
         }
+
+        div.track {
+          flex: 1 1 auto;
+          width: 30%;
+        }
       }
 
 
@@ -147,17 +152,17 @@ section.timeflex {
 
 
       div.row {
-        margin: 6px 0 6px 0;
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
 
         &:nth-child(odd) {
-          background-color: rgba(128,128,196,0.07);
+          background-color: rgba(196,181,128,0.07);
         }
 
         div {
           display: flex;
           align-items: center;
-          height: 48px;
-
+          height: 70px;
 
           &.type {
             display: flex;
@@ -167,9 +172,10 @@ section.timeflex {
               width: 40px;
             }
           }
-          &.who, &.what {
+
+          &.who, &.what, &.track {
             text-transform: none;
-            font-size: 1em;
+            font-size: 1.1rem;
             font-weight: normal;
           }
         }
@@ -177,14 +183,14 @@ section.timeflex {
 
         &.speak {
 
-          div.what, div.who {
+          div.what, div.who, div.track {
             font-size: 1.3rem;
           }
         }
 
         &.keynote {
 
-          div.what, div.who {
+          div.what, div.who, div.track {
             font-size: 1.3rem;
             font-weight:bold;
           }
@@ -192,17 +198,17 @@ section.timeflex {
 
         &.workshop {
 
-          div.what, div.who {
+          div.what, div.who, div.track {
             font-size: 1.3rem;
           }
         }
 
-        &.party, &.break, &.info, &.food{
-          height: 32px;
+        &.party, &.break, &.info, &.food {
+          height: 90px;
           color: rgba(0,0,0,0.8);
 
           & > div {
-            height: 32px;
+            height: 90px;
           }
 
           div.type > img {

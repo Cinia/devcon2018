@@ -18,6 +18,7 @@ body {
     justify-content: space-around;
     min-height: 100vh;
     padding-top: 60px;
+    padding-bottom: 60px;
     background: linear-gradient(to bottom, #d6d1ca 0, #f4efec 5%, #f4efec 95%, #d6d1ca 100%); }
     body section > div.container {
       width: 100%;
@@ -242,7 +243,7 @@ section.speakers div.presentations div.speak {
       background-size: 75%;
       background-position: center center;
       margin-right: 6px;
-      background-color: rgba(68, 102, 187, 0.2);
+      background-color: rgba(187, 187, 68, 0.2);
       border-radius: 6px; }
   section.speakers div.presentations div.speak p {
     font-size: 1em;
@@ -306,18 +307,17 @@ section.timeflex div.flextable {
     section.timeflex div.flextable div.row div.what {
       flex: 2 2 auto;
       width: 100%;
-      padding-top: 6px;
       font-weight: bold; }
     section.timeflex div.flextable div.row.food div.type > img {
-      background-color: rgba(68, 187, 102, 0.2); }
+      background-color: rgba(187, 187, 68, 0.2); }
     section.timeflex div.flextable div.row.speak div.type > img, section.timeflex div.flextable div.row.keynote div.type > img {
-      background-color: rgba(68, 102, 187, 0.2); }
+      background-color: rgba(187, 187, 68, 0.2); }
     section.timeflex div.flextable div.row.info div.type > img {
-      background-color: rgba(102, 102, 102, 0.2); }
+      background-color: rgba(187, 187, 68, 0.2); }
     section.timeflex div.flextable div.row.workshop div.type > img {
       background-color: rgba(187, 187, 68, 0.2); }
     section.timeflex div.flextable div.row.break div.type > img, section.timeflex div.flextable div.row.party div.type > img {
-      background-color: rgba(187, 102, 102, 0.2); }
+      background-color: rgba(187, 187, 68, 0.2); }
   @media screen and (min-width: 780px) {
     section.timeflex div.flextable header, section.timeflex div.flextable div.row {
       flex-wrap: nowrap; }
@@ -335,6 +335,9 @@ section.timeflex div.flextable {
       section.timeflex div.flextable header div.what, section.timeflex div.flextable div.row div.what {
         flex: 1 1 auto;
         width: auto; }
+      section.timeflex div.flextable header div.track, section.timeflex div.flextable div.row div.track {
+        flex: 1 1 auto;
+        width: 30%; }
     section.timeflex div.flextable header {
       display: flex;
       flex-direction: row;
@@ -349,35 +352,36 @@ section.timeflex div.flextable {
         text-transform: uppercase;
         font-weight: bold; }
     section.timeflex div.flextable div.row {
-      margin: 6px 0 6px 0; }
+      margin: 0 0 0 0;
+      padding: 0 0 0 0; }
       section.timeflex div.flextable div.row:nth-child(odd) {
-        background-color: rgba(128, 128, 196, 0.07); }
+        background-color: rgba(196, 181, 128, 0.07); }
       section.timeflex div.flextable div.row div {
         display: flex;
         align-items: center;
-        height: 48px; }
+        height: 70px; }
         section.timeflex div.flextable div.row div.type {
           display: flex;
           justify-content: center;
           align-items: center; }
           section.timeflex div.flextable div.row div.type img {
             width: 40px; }
-        section.timeflex div.flextable div.row div.who, section.timeflex div.flextable div.row div.what {
+        section.timeflex div.flextable div.row div.who, section.timeflex div.flextable div.row div.what, section.timeflex div.flextable div.row div.track {
           text-transform: none;
-          font-size: 1em;
+          font-size: 1.1rem;
           font-weight: normal; }
-      section.timeflex div.flextable div.row.speak div.what, section.timeflex div.flextable div.row.speak div.who {
+      section.timeflex div.flextable div.row.speak div.what, section.timeflex div.flextable div.row.speak div.who, section.timeflex div.flextable div.row.speak div.track {
         font-size: 1.3rem; }
-      section.timeflex div.flextable div.row.keynote div.what, section.timeflex div.flextable div.row.keynote div.who {
+      section.timeflex div.flextable div.row.keynote div.what, section.timeflex div.flextable div.row.keynote div.who, section.timeflex div.flextable div.row.keynote div.track {
         font-size: 1.3rem;
         font-weight: bold; }
-      section.timeflex div.flextable div.row.workshop div.what, section.timeflex div.flextable div.row.workshop div.who {
+      section.timeflex div.flextable div.row.workshop div.what, section.timeflex div.flextable div.row.workshop div.who, section.timeflex div.flextable div.row.workshop div.track {
         font-size: 1.3rem; }
       section.timeflex div.flextable div.row.party, section.timeflex div.flextable div.row.break, section.timeflex div.flextable div.row.info, section.timeflex div.flextable div.row.food {
-        height: 32px;
+        height: 90px;
         color: rgba(0, 0, 0, 0.8); }
         section.timeflex div.flextable div.row.party > div, section.timeflex div.flextable div.row.break > div, section.timeflex div.flextable div.row.info > div, section.timeflex div.flextable div.row.food > div {
-          height: 32px; }
+          height: 90px; }
         section.timeflex div.flextable div.row.party div.type > img, section.timeflex div.flextable div.row.break div.type > img, section.timeflex div.flextable div.row.info div.type > img, section.timeflex div.flextable div.row.food div.type > img {
           width: 30px; } }
 
@@ -397,6 +401,9 @@ section.timetable {
       text-align: center; }
     section.timetable table tr .who {
       width: 200px;
+      text-align: left; }
+    section.timetable table tr .track {
+      width: 30%;
       text-align: left; }
     section.timetable table tr .what {
       width: auto;
