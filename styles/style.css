@@ -18,7 +18,7 @@ body {
     justify-content: space-around;
     min-height: 100vh;
     padding-top: 60px;
-    background: linear-gradient(to bottom, #b1afa3 0, #f4efec 5%, #f4efec 95%, #b1afa3 100%); }
+    background: linear-gradient(to bottom, #d6d1ca 0, #f4efec 5%, #f4efec 95%, #d6d1ca 100%); }
     body section > div.container {
       width: 100%;
       margin-left: 0;
@@ -38,7 +38,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #b1afa3; }
+    background: #d6d1ca; }
   body h1 {
     font-family: "Josefin Sans", "Verdana", "Arial", Sans;
     font-size: 2.5rem;
@@ -193,7 +193,7 @@ section.banner {
     left: 0;
     width: 100%;
     height: 40%;
-    background: linear-gradient(to bottom, transparent 0%, rgba(74, 61, 52, 0.5) 80%, #b1afa3 100%); }
+    background: linear-gradient(to bottom, transparent 0%, rgba(214, 209, 202, 0.5) 80%, #d6d1ca 100%); }
   section.banner div.anim-container {
     position: absolute;
     top: 0;
