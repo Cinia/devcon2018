@@ -5,10 +5,13 @@ section.banner {
   position: relative;
 
   background: url("../imgs/logo2019.jpg") no-repeat;
-  background-position: center center;
+
   -webkit-background-size: cover;
   background-size: cover;
 
+  div.devconLogo {
+    width: 100%;
+  }
 
   &:after {
     content: " ";
@@ -77,10 +80,15 @@ section.banner {
   }
 
 
-
-
-
 }
+
+
+@media screen and (max-width: 1024px) {
+  section.banner {
+    background-position: center center;
+  }
+}
+
 
 section.architecture {
   height: 100vh;
