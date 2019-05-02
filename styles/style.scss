@@ -16,17 +16,16 @@ $wideWidth: 1024px;
 $mainColor: #4466BB;
 $secColor: #44CC88;
 
-$lighterBg: #F0FAFF;
-$mainBg: #E8F0FF;
-$darkerBg: #D8E0EF;
-$textColor: #000810;
+$lighterBg: #f5f1ee;
+$mainBg: #f4efec;
+$darkerBg: #d6d1ca;
+$textColor: #120000;
 
-
-$speakColor: rgba(68,102,187,0.2);
+$speakColor: rgba(187,187,68,0.2);
 $workshopColor: rgba(187,187,68,0.2);
-$foodColor: rgba(68,187,102,0.2);
-$infoColor: rgba(102,102,102,0.2);
-$freeTimeColor: rgba(187,102,102, 0.2);
+$foodColor: rgba(187,187,68,0.2);
+$infoColor: rgba(187,187,68,0.2);
+$freeTimeColor: rgba(187,187,68, 0.2);
 
 $mainFont: "Cabin", "Verdana", "Arial", Sans;
 $headerFont: "Josefin Sans", "Verdana", "Arial",Sans;
@@ -48,6 +47,7 @@ body {
 
     min-height: 100vh;
     padding-top: 60px;
+    padding-bottom: 60px;
 
     background: linear-gradient(to bottom, $darkerBg 0, $mainBg 5%, $mainBg 95%, $darkerBg 100% );
 
