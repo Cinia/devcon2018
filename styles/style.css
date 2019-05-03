@@ -375,6 +375,18 @@ section.timeflex div.flextable div.row div.when {
   display: flex;
   align-items: center;
 }
+section.timeflex div.flextable div.row div.track {
+  padding: 0.5em;
+}
+section.timeflex div.flextable div.row div.UX-track {
+  background-color: #fcf6f3;
+}
+section.timeflex div.flextable div.row div.QA-track {
+  background-color: #fcf0e3;
+}
+section.timeflex div.flextable div.row div.dev-track {
+  background-color: #e2ddd6;
+}
 section.timeflex div.flextable div.row div.who {
   flex: 1 1 auto;
   min-width: 200px;
@@ -409,6 +421,11 @@ section.timeflex div.flextable div.row.workshop div.type > img {
 }
 section.timeflex div.flextable div.row.break div.type > img, section.timeflex div.flextable div.row.party div.type > img {
   background-color: rgba(187, 187, 68, 0.2);
+}
+@media screen and (max-width: 780px) {
+  section.timeflex div.flextable div.track {
+    width: 100%;
+  }
 }
 @media screen and (min-width: 780px) {
   section.timeflex div.flextable header, section.timeflex div.flextable div.row {
