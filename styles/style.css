@@ -230,6 +230,7 @@ section.banner {
   padding-bottom: 0px;
   position: relative;
   background: url("../imgs/wall-background.jpg") no-repeat;
+  background-position: center center;
   -webkit-background-size: cover;
   background-size: cover;
 }
