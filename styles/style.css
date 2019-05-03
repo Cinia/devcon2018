@@ -380,12 +380,15 @@ section.timeflex div.flextable div.row div.track {
 }
 section.timeflex div.flextable div.row div.UX-track {
   background-color: #fcf6f3;
+  border-top: 1px solid #f1ebe4;
 }
 section.timeflex div.flextable div.row div.QA-track {
   background-color: #fcf0e3;
+  border-top: 1px solid #f1ebe4;
 }
 section.timeflex div.flextable div.row div.dev-track {
   background-color: #e2ddd6;
+  border-top: 1px solid #f1ebe4;
 }
 section.timeflex div.flextable div.row div.who {
   flex: 1 1 auto;
