@@ -1,16 +1,19 @@
 
 section.banner {
-  height: 100vh;
+  min-height: 70vh !important;
+  padding-bottom: 0px;
 
   position: relative;
 
-  background: url("../imgs/logo2019.jpg") no-repeat;
+  background: url("../imgs/wall-background.jpg") no-repeat;
 
   -webkit-background-size: cover;
   background-size: cover;
 
   div.devconLogo {
-    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   &:after {
@@ -85,7 +88,13 @@ section.banner {
 
 @media screen and (max-width: 1024px) {
   section.banner {
+    background: url("../imgs/logo2019.jpg") no-repeat;
     background-position: center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    div.devconLogo {
+      display: none;
+    }
   }
 }
 
