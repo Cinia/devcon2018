@@ -28,6 +28,22 @@ section.timeflex {
         align-items: center;
       }
 
+      div.track {
+        padding: 0.5em;
+      }
+
+      div.UX-track {
+        background-color: #fcf6f3;//#f5e8d9;
+      }
+
+      div.QA-track {
+        background-color: #fcf0e3;
+      }
+
+      div.dev-track {
+        background-color: #e2ddd6;
+      }
+
       div.who {
         flex: 1 1 auto;
         min-width: 200px;
@@ -88,6 +104,13 @@ section.timeflex {
         div.type > img {
           background-color: $freeTimeColor;
         }
+      }
+
+    }
+
+    @media screen and (max-width: $mobileWidth + 300){
+      div.track {
+        width: 100%
       }
 
     }
