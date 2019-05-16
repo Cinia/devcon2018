@@ -50,43 +50,47 @@
 
 <div class="page">
 
+    <div id="home">
+        <section class="banner">
 
-    <section class="banner" id="home">
+            <div class="devconLogo" id="devconLogo">
 
-        <div class="devconLogo" id="devconLogo">
+                <img src="./imgs/lohkari_without_background.png" alt="DEVcon 2019">
 
-            <img src="./imgs/lohkari_without_background.png" alt="DEVcon 2019">
+            </div>
 
-        </div>
+        </section>
 
-    </section>
+        <section class="countdown" id="countdown">
+            <h2 id="countdownTitle">Tapahtuman alkuun</h2>
+            <h2 id="devconCountdown"></h2>
+            <script>
+                var countDownDate = new Date("May 30, 2019 09:15:00").getTime();
+                document.getElementById("countdownTitle").style.display = "none";
+                var x = setInterval(function() {
 
-    <!--    TODO: Countdown styles-->
-    <p id="devconCountdown"></p>
+                    var now = new Date().getTime();
+                    var distance = countDownDate - now;
 
-    <script>
-        var countDownDate = new Date("May 30, 2019 09:15:00").getTime();
+                    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        var x = setInterval(function() {
+                    document.getElementById("countdownTitle").style.display = "unset";
+                    document.getElementById("devconCountdown").innerHTML = days + " päivää " + hours + " tuntia "
+                        + minutes + " minuuttia " + seconds + " sekuntia ";
 
-            var now = new Date().getTime();
-            var distance = countDownDate - now;
+                    if (distance < 0) {
+                        clearInterval(x);
+                        document.getElementById("countdownTitle").style.display = "none";
+                        document.getElementById("devconCountdown").innerHTML = "DevCon 2019 käynnissä!";
+                    }
+                }, 1000);
+            </script>
+        </section>
+    </div>
 
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            document.getElementById("devconCountdown").innerHTML = days + " päivää " + hours + " tuntia "
-                + minutes + " minuuttia " + seconds + " sekuntia ";
-
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("devconCountdown").innerHTML = "DevCon 2019 käynnissä!";
-            }
-        }, 1000);
-    </script>
-    <!--    TODO: Countdown styles-->
 
     <section class="speakers" id="speakers">
         <div class="container">
