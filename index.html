@@ -34,11 +34,11 @@
         <img src="./imgs/logo-bw.png" alt="DEVcon 2019">
     </div>
     <ul>
-        <li><a class="menulink" href="#home">Home</a></li>
-        <li><a class="menulink" href="#speakers">Presentations</a></li>
-        <li><a class="menulink" href="#workshops">Workshops</a></li>
-        <li><a class="menulink" href="#timetable">Timetable</a></li>
-        <li><a class="menulink" href="#location">Location</a></li>
+        <li><a class="menulink" href="#home">Etusivu</a></li>
+        <li><a class="menulink" href="#speakers">Esitykset</a></li>
+        <li><a class="menulink" href="#workshops">Työpajat</a></li>
+        <li><a class="menulink" href="#timetable">Aikataulu</a></li>
+        <li><a class="menulink" href="#location">Tapahtumapaikka</a></li>
     </ul>
 
 
@@ -50,34 +50,76 @@
 
 <div class="page">
 
+    <div id="home">
+        <section class="banner">
 
-    <section class="banner" id="home">
+            <div class="devconLogo" id="devconLogo">
 
-        <div class="devconLogo" id="devconLogo">
+                <img src="./imgs/lohkari_without_background.png" alt="DEVcon 2019">
 
-            <img src="./imgs/lohkari_without_background.png" alt="DEVcon 2019">
+            </div>
 
-        </div>
+        </section>
 
-    </section>
+        <section class="countdown" id="countdown">
+            <h2 id="countdownTitle">Tapahtuman alkuun</h2>
+            <h2 id="devconCountdown"></h2>
+            <script>
+                var countDownDate = new Date("May 30, 2019 09:15:00").getTime();
+                document.getElementById("countdownTitle").style.display = "none";
+                var x = setInterval(function() {
+
+                    var now = new Date().getTime();
+                    var distance = countDownDate - now;
+
+                    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                    document.getElementById("countdownTitle").style.display = "unset";
+                    document.getElementById("devconCountdown").innerHTML = days + " päivää " + hours + " tuntia "
+                        + minutes + " minuuttia " + seconds + " sekuntia ";
+
+                    if (distance < 0) {
+                        clearInterval(x);
+                        document.getElementById("countdownTitle").style.display = "none";
+                        document.getElementById("devconCountdown").innerHTML = "DevCon 2019 käynnissä!";
+                    }
+                }, 1000);
+            </script>
+        </section>
+    </div>
+
 
     <section class="speakers" id="speakers">
         <div class="container">
-            <h1>Presentations</h1>
+            <h1>Esitykset</h1>
 
             <div class="box-grid presentations">
                 <div class="box speak keynote">
-                    <h3>Arto Liukkonen - Nordcloud</h3>
-                    <h2>Serverless-architecture</h2>
-                    <!--                    TODO: Fill in description-->
-                    <p>Arto Liukkonen works as a Lead developer at Nordcloud.</p>
+                    <img src="./imgs/arto.png" alt="Arto Liukkonen">
+                    <div>
+                        <h3>Arto Liukkonen - Nordcloud</h3>
+                        <h2>Serverless-architecture</h2>
+                        <!--                    TODO: Fill in description-->
+                        <p>Arto Liukkonen works as a Lead developer at Nordcloud.</p>
+                    </div>
                 </div>
 
                 <div class="box speak keynote">
-                    <h3>Pekka Klärck - Robot Framework Foundation</h3>
-                    <h2>Robot Framework</h2>
-                    <!--                    TODO: Fill in description-->
-                    <p>Pekka Klärck works as a Lead developer of Robot Framework Foundation.</p>
+                    <img src="./imgs/peke3.jpg" alt="Pekka Klärck">
+                    <div>
+                        <h3>Pekka Klärck - Robot Framework Foundation</h3>
+                        <h2>Robot Framework</h2>
+                        <!--                    TODO: Translate the description-->
+                        <p>Pekka Klärck is a tester, developer and independent consultant from
+                            Finland. He has been involved with testing and test automation since
+                            2000 and has been writing Python code since 2004. He is the lead
+                            developer of Robot Framework, a highly flexible open source automation
+                            framework, and thus knows the framework and the ecosystem around it
+                            extremely well.</p>
+                    </div>
                 </div>
 
                 <div class="box speak">
@@ -105,11 +147,9 @@
                 </div>
 
                 <div class="box speak">
-                    <!--                    TODO: Fill in speaker-->
-                    <h3>TBA</h3>
-                    <h2>Varmistuu myöhemmin</h2>
-                    <!--                    TODO: Fill in description-->
-                    <p>TBA</p>
+                    <h3>Mikko Jakonen</h3>
+                    <h2>Docker Swarm testaajan työkaluna</h2>
+                    <p>Tutustutaan matalan kynnyksen konttiorkestraattori Docker Swarmiin testaajan näkökulmasta. Käydään myös hieman läpi sen CI/CD-käyttömahdollisuuksia.</p>
                 </div>
 
                 <div class="box speak">
@@ -145,7 +185,7 @@
 
     <section class="workshops" id="workshops">
         <div class="container">
-            <h1>Workshops and demonstrations</h1>
+            <h1>Työpajat ja demot</h1>
 
             <div class="box-grid">
 
@@ -183,26 +223,26 @@
     <section class="timeflex" id="timetable">
         <div class="container">
 
-            <h1>Timetable</h1>
+            <h1>Aikataulu</h1>
 
             <div class="flextable">
 
                 <header>
-                    <div class="when">When</div>
+                    <div class="when">Milloin</div>
                     <div class="what"></div>
-                    <div class="what">Main stage</div>
+                    <div class="what">Pääsali</div>
                 </header>
 
                 <div class="row info">
                     <div class="when">8:45 - 9:15</div>
                     <div class="what"></div>
-                    <div class="what">Breakfast</div>
+                    <div class="what">Aamupala</div>
                 </div>
 
                 <div class="row info">
                     <div class="when">9:15 - 9:30</div>
                     <div class="what"></div>
-                    <div class="what">Welcome - Kimmo Alamartimo</div>
+                    <div class="what">Tervetuliaissanat - Kimmo Alamartimo</div>
                 </div>
 
                 <div class="row info">
@@ -220,10 +260,10 @@
                 <div class="row info">
                     <div class="when">11:30 - 12:30</div>
                     <div class="what"></div>
-                    <div class="what">Lunch</div>
+                    <div class="what">Lounas</div>
                 </div>
 
-                 <header>
+                <header>
                     <div class="when"></div>
                     <div class="track">UI/UX & frontend track</div>
                     <div class="track">QA & automation track</div>
@@ -240,8 +280,8 @@
                 <div class="row info">
                     <div class="when">13:00 - 13:30</div>
                     <div class="track UX-track">Mitä MVP:n jälkeen - UX-näkökulma - Samu Lappalainen</div>
-                    <div class="track QA-track">continues</div>
-                    <div class="track dev-track">continues</div>
+                    <div class="track QA-track">(jatkuu)</div>
+                    <div class="track dev-track">(jatkuu)</div>
                 </div>
 
                 <div class="row info">
@@ -254,7 +294,7 @@
                 <div class="row info">
                     <div class="when">14:00 - 14:30</div>
                     <div class="what"></div>
-                    <div class="what">Coffee break</div>
+                    <div class="what">Kahvitauko</div>
                 </div>
 
                 <div class="row info">
@@ -266,39 +306,39 @@
 
                 <div class="row info">
                     <div class="when">15:00 - 15:30</div>
-                    <div class="track UX-track">continues</div>
-                    <div class="track QA-track">TBA</div>
+                    <div class="track UX-track">(jatkuu)</div>
+                    <div class="track QA-track">Docker Swarm testaajan työkaluna - Mikko Jakonen</div>
                     <div class="track dev-track">Alustaratkaisun vaatimukset ja toteutus (case Keko) - Sakari Hassi, Markus Pohjola</div>
                 </div>
 
                 <header>
                     <div class="when"></div>
                     <div class="what"></div>
-                    <div class="what">Main stage</div>
+                    <div class="what">Pääsali</div>
                 </header>
 
                 <div class="row info">
                     <div class="when">15:30 - 15:40</div>
                     <div class="what"></div>
-                    <div class="what">Refuctoring results</div>
+                    <div class="what">Refucturoinnin tulosten esittely</div>
                 </div>
 
                 <div class="row info">
                     <div class="when">15:40 - 16:00</div>
                     <div class="what"></div>
-                    <div class="what">Closing remarks - Tero Jokinen</div>
+                    <div class="what">Loppusanat - Tero Jokinen</div>
                 </div>
 
                 <div class="row info">
                     <div class="when">16:00</div>
                     <div class="what"></div>
-                    <div class="what">Unofficial afterparty</div>
+                    <div class="what">Epäviralliset jatkot</div>
                 </div>
 
                 <div class="row info">
                     <div class="when">16:15</div>
                     <div class="what"></div>
-                    <div class="what">Buses to Jyväskylä and Helsinki</div>
+                    <div class="what">Bussit Jyväskylään ja Helsinkiin</div>
                 </div>
 
             </div>
@@ -310,16 +350,16 @@
 
     <section class="location" id="location">
         <div class="container">
-            <h1>Location</h1>
+            <h1>Tapahtumapaikka</h1>
 
             <div class="image-container">
                 <img src="https://sipa.s-palvelut.fi/?url=https%3A%2F%2Flaari.sok.fi%2Fdocuments%2F419563%2F1193989%2FVeturihalli%2F27d05031-944c-4f6c-a418-339e9cfbec19%3Ft%3D1453198402000&maxWidth=1170&checksum=7c40d35b5716e923c0b290cc27f23d9f" alt="Hotel Torni"/>
             </div>
 
-            <p>This year the DEVcon is held at <a href="https://www.sokoshotels.fi/fi/tampere/solo-sokos-hotel-torni-tampere">Sokos Hotel Torni</a> in Tampere on 30.5.2019. The venue will be in main hall and in two smaller halls.</p>
+            <p>Tämän vuoden DEVcon järjestetään <a href="https://www.sokoshotels.fi/fi/tampere/solo-sokos-hotel-torni-tampere">Sokos Hotel Tornissa</a> Tampereella 30.5.2019. Esitykset ja työpajat pidetään pääsalissa ja kahdessa pienemmässä salissa.</p>
 
 
-            <h2>Address</h2>
+            <h2>Osoite</h2>
 
             <p class="address">
                 Ratapihankatu 43<br/>
@@ -327,7 +367,7 @@
             </p>
 
             <div class="image-container">
-                <img src="./imgs/map.png" alt="Map to Hotel Torni"/>
+                <img src="./imgs/map.png" alt="Kartta Hotel Tornille"/>
             </div>
 
         </div>

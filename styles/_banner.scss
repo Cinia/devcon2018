@@ -1,8 +1,9 @@
 
 section.banner {
-  min-height: 70vh !important;
+  //min-height: 90vh !important;
   padding-bottom: 0px;
-
+  display: block;
+  width: 100%;
   position: relative;
 
   background: url("../imgs/wall-background.jpg") no-repeat;
@@ -14,6 +15,11 @@ section.banner {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    img {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
   }
 
   &:after {
@@ -84,6 +90,23 @@ section.banner {
 }
 
 
+#countdown {
+  display: block;
+  min-height: unset;
+  text-align: center;
+  padding: 20px 0;
+  background-color: #f4efec;
+  position: absolute;
+  top: 89vh;
+  width: 100%;
+    h2{
+      color: #2d707a;
+      margin-top: 6px;
+      margin-bottom: 4px;
+    }
+}
+
+
 @media screen and (max-width: 1024px) {
   section.banner {
     background: url("../imgs/logo2019.jpg") no-repeat;
@@ -93,6 +116,9 @@ section.banner {
     div.devconLogo {
       display: none;
     }
+  }
+  #countdown {
+    top: 85vh !important;
   }
 }
 
