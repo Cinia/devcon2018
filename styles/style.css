@@ -3,115 +3,91 @@
   margin: 0;
   padding: 0;
   outline: none;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 body {
   background-color: #f4efec;
   color: #120000;
   font-family: "Cabin", "Verdana", "Arial", Sans;
   display: flex;
-  flex-direction: column;
-}
-body section {
-  position: relative;
-  flex: 1;
-  display: flex;
-  justify-content: space-around;
-  min-height: 100vh;
-  padding-top: 60px;
-  padding-bottom: 60px;
-  background: linear-gradient(to bottom, #d6d1ca 0, #f4efec 5%, #f4efec 95%, #d6d1ca 100%);
-}
-body section > div.container {
-  width: 100%;
-  margin-left: 0;
-  padding: 0 6px;
-}
-@media screen and (min-width: 480px) {
-  body section > div.container {
-    width: 94%;
-    margin-left: 3%;
-    padding: 0 6px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  body section > div.container {
-    width: 1024px;
-    margin-left: 0;
-    padding: 0;
-  }
-}
-body div.page > footer {
-  height: 128px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #d6d1ca;
-}
-body h1 {
-  font-family: "Josefin Sans", "Verdana", "Arial", Sans;
-  font-size: 2.5rem;
-  text-transform: uppercase;
-  font-weight: 400;
-  letter-spacing: 5px;
-  margin: 24px 0 12px 0;
-  padding: 0 12px;
-  border-bottom: double 5px rgba(0, 0, 64, 0.05);
-}
-@media screen and (max-width: 480px) {
+  flex-direction: column; }
+  body section {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    min-height: 100vh;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: linear-gradient(to bottom, #d6d1ca 0, #f4efec 5%, #f4efec 95%, #d6d1ca 100%); }
+    body section > div.container {
+      width: 100%;
+      margin-left: 0;
+      padding: 0 6px; }
+      @media screen and (min-width: 480px) {
+        body section > div.container {
+          width: 94%;
+          margin-left: 3%;
+          padding: 0 6px; } }
+      @media screen and (min-width: 1024px) {
+        body section > div.container {
+          width: 1024px;
+          margin-left: 0;
+          padding: 0; } }
+  body div.page > footer {
+    height: 128px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #d6d1ca; }
   body h1 {
-    font-size: 1.6rem;
-  }
-}
-body h2 {
-  font-family: "Josefin Sans", "Verdana", "Arial", Sans;
-  font-size: 2rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: normal;
-  margin: 3px 0 6px 0;
-}
-@media screen and (max-width: 480px) {
+    font-family: "Josefin Sans", "Verdana", "Arial", Sans;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 5px;
+    margin: 24px 0 12px 0;
+    padding: 0 12px;
+    border-bottom: double 5px rgba(0, 0, 64, 0.05); }
+    @media screen and (max-width: 480px) {
+      body h1 {
+        font-size: 1.6rem; } }
   body h2 {
-    font-size: 1.4rem;
-  }
-}
-body h3 {
-  font-family: "Josefin Sans", "Verdana", "Arial", Sans;
-  font-size: 1.3rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: normal;
-  color: rgba(0, 0, 0, 0.8);
-}
-@media screen and (max-width: 480px) {
+    font-family: "Josefin Sans", "Verdana", "Arial", Sans;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: normal;
+    margin: 3px 0 6px 0; }
+    @media screen and (max-width: 480px) {
+      body h2 {
+        font-size: 1.4rem; } }
   body h3 {
-    font-size: 1.2rem;
-  }
-}
+    font-family: "Josefin Sans", "Verdana", "Arial", Sans;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: normal;
+    color: rgba(0, 0, 0, 0.8); }
+    @media screen and (max-width: 480px) {
+      body h3 {
+        font-size: 1.2rem; } }
 
 .box-grid {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-}
-.box-grid .box {
-  flex: 1 1 auto;
-  width: 100%;
-}
-@media screen and (min-width: 480px) {
+  flex-wrap: wrap; }
   .box-grid .box {
-    flex: 1 0 auto;
-    width: 50%;
-    min-width: 400px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .box-grid .box {
-    width: 50%;
-  }
-}
+    flex: 1 1 auto;
+    width: 100%; }
+    @media screen and (min-width: 480px) {
+      .box-grid .box {
+        flex: 1 0 auto;
+        width: 50%;
+        min-width: 400px; } }
+    @media screen and (min-width: 1024px) {
+      .box-grid .box {
+        width: 50%; } }
 
 nav {
   position: fixed;
@@ -125,84 +101,67 @@ nav {
   display: flex;
   flex-direction: column-reverse;
   padding-top: 64px;
-  transition: all 0.2s linear;
-}
-nav.hidden {
-  left: -300px;
-}
-nav div.logo {
-  flex: 0 0 auto;
-  height: 115px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-nav div.logo img {
-  width: 100%;
-  height: auto;
-}
-nav ul {
-  flex: 1;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-}
-nav ul li {
-  text-align: center;
-  height: 48px;
-  margin: 12px 0;
-}
-nav ul li a {
-  color: white;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  text-decoration: none;
-}
-@media screen and (min-width: 480px) {
-  nav {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    flex-direction: row;
-    padding-top: 0;
-  }
+  transition: all 0.2s linear; }
   nav.hidden {
-    left: 0;
-  }
+    left: -300px; }
   nav div.logo {
-    flex: 1;
-    display: none;
-    height: 64px;
-  }
-  nav div.logo img {
-    height: 54px;
-    width: auto;
-  }
-}
-@media screen and (min-width: 480px) and (min-width: 1024px) {
-  nav div.logo {
+    flex: 0 0 auto;
+    height: 115px;
     display: flex;
     justify-content: center;
-    align-items: center;
-  }
-}
-@media screen and (min-width: 480px) {
+    align-items: center; }
+    nav div.logo img {
+      width: 100%;
+      height: auto; }
   nav ul {
-    flex: 3;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-  nav ul li {
     flex: 1;
-    height: 100%;
+    list-style: none;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-  }
-}
+    justify-content: flex-start; }
+    nav ul li {
+      text-align: center;
+      height: 48px;
+      margin: 12px 0; }
+      nav ul li a {
+        color: white;
+        text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        text-decoration: none; }
+  @media screen and (min-width: 480px) {
+    nav {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      flex-direction: row;
+      padding-top: 0; }
+      nav.hidden {
+        left: 0; }
+      nav div.logo {
+        flex: 1;
+        display: none;
+        height: 64px; }
+        nav div.logo img {
+          height: 54px;
+          width: auto; } }
+    @media screen and (min-width: 480px) and (min-width: 1024px) {
+      nav div.logo {
+        display: flex;
+        justify-content: center;
+        align-items: center; } }
+  @media screen and (min-width: 480px) {
+      nav ul {
+        flex: 3;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between; }
+        nav ul li {
+          flex: 1;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center; } }
 
 div.open-menu {
   position: fixed;
@@ -212,18 +171,14 @@ div.open-menu {
   height: 64px;
   z-index: 2000;
   background: rgba(0, 0, 0, 0.4);
-  border-bottom-right-radius: 12px;
-}
-div.open-menu img {
-  width: 48px;
-  margin: 8px;
-  cursor: pointer;
-}
-@media screen and (min-width: 480px) {
-  div.open-menu {
-    display: none;
-  }
-}
+  border-bottom-right-radius: 12px; }
+  div.open-menu img {
+    width: 48px;
+    margin: 8px;
+    cursor: pointer; }
+  @media screen and (min-width: 480px) {
+    div.open-menu {
+      display: none; } }
 
 section.banner {
   min-height: 70vh !important;
@@ -232,379 +187,294 @@ section.banner {
   background: url("../imgs/wall-background.jpg") no-repeat;
   background-position: center center;
   -webkit-background-size: cover;
-  background-size: cover;
-}
-section.banner div.devconLogo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-section.banner:after {
-  content: " ";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 40%;
-  background: linear-gradient(to bottom, transparent 0%, rgba(214, 209, 202, 0.5) 80%, #d6d1ca 100%);
-}
-section.banner div.anim-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 1;
-  transition: opacity 1s linear;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-section.banner div.anim-container.hidden {
-  opacity: 0;
-}
-section.banner div.anim-container img {
-  width: 90%;
-}
+  background-size: cover; }
+  section.banner div.devconLogo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+  section.banner:after {
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(to bottom, transparent 0%, rgba(214, 209, 202, 0.5) 80%, #d6d1ca 100%); }
+  section.banner div.anim-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+    transition: opacity 1s linear;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    section.banner div.anim-container.hidden {
+      opacity: 0; }
+    section.banner div.anim-container img {
+      width: 90%; }
 
 @media screen and (max-width: 1024px) {
   section.banner {
     background: url("../imgs/logo2019.jpg") no-repeat;
     background-position: center center;
     -webkit-background-size: cover;
-    background-size: cover;
-  }
-  section.banner div.devconLogo {
-    display: none;
-  }
-}
+    background-size: cover; }
+    section.banner div.devconLogo {
+      display: none; } }
 section.architecture {
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-section.architecture div.title {
-  width: 80%;
-  height: 80vh;
-  background: url("../imgs/title.png") no-repeat;
-  background-position: center center;
-  background-size: contain;
-}
+  justify-content: center; }
+  section.architecture div.title {
+    width: 80%;
+    height: 80vh;
+    background: url("../imgs/title.png") no-repeat;
+    background-position: center center;
+    background-size: contain; }
 
 section.speakers div.presentations div.speak {
-  padding: 18px 24px;
-}
-section.speakers div.presentations div.speak.keynote {
-  box-shadow: 0 0 30px 2px rgba(0, 0, 0, 0.08);
-  background-color: rgba(255, 255, 255, 0.1);
-}
-section.speakers div.presentations div.speak h3 {
-  position: relative;
-  height: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-section.speakers div.presentations div.speak h3:before {
-  position: relative;
-  content: " ";
-  width: 24px;
-  height: 24px;
-  background: url("../imgs/speak.svg") no-repeat;
-  background-size: 75%;
-  background-position: center center;
-  margin-right: 6px;
-  background-color: rgba(187, 187, 68, 0.2);
-  border-radius: 6px;
-}
-section.speakers div.presentations div.speak p {
-  font-size: 1em;
-  margin: 6px 0;
-}
+  padding: 18px 24px; }
+  section.speakers div.presentations div.speak.keynote {
+    box-shadow: 0 0 30px 2px rgba(0, 0, 0, 0.08);
+    background-color: rgba(255, 255, 255, 0.1); }
+  section.speakers div.presentations div.speak h3 {
+    position: relative;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; }
+    section.speakers div.presentations div.speak h3:before {
+      position: relative;
+      content: " ";
+      width: 24px;
+      height: 24px;
+      background: url("../imgs/speak.svg") no-repeat;
+      background-size: 75%;
+      background-position: center center;
+      margin-right: 6px;
+      background-color: rgba(187, 187, 68, 0.2);
+      border-radius: 6px; }
+  section.speakers div.presentations div.speak p {
+    font-size: 1em;
+    margin: 6px 0; }
 
 section.workshops .box-grid {
-  margin: 24px 0;
-}
-section.workshops .box-grid .box {
-  padding: 18px 24px;
-}
-section.workshops .box-grid .box h3 {
-  position: relative;
-  height: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-section.workshops .box-grid .box h3:before {
-  position: relative;
-  content: " ";
-  width: 24px;
-  height: 24px;
-  background: url("../imgs/jigsaw.svg") no-repeat;
-  background-size: 75%;
-  background-position: center center;
-  margin-right: 6px;
-  background-color: rgba(187, 187, 68, 0.2);
-  border-radius: 6px;
-}
-section.workshops .box-grid .box p {
-  font-size: 1em;
-  margin: 6px 0;
-}
+  margin: 24px 0; }
+  section.workshops .box-grid .box {
+    padding: 18px 24px; }
+    section.workshops .box-grid .box h3 {
+      position: relative;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start; }
+      section.workshops .box-grid .box h3:before {
+        position: relative;
+        content: " ";
+        width: 24px;
+        height: 24px;
+        background: url("../imgs/jigsaw.svg") no-repeat;
+        background-size: 75%;
+        background-position: center center;
+        margin-right: 6px;
+        background-color: rgba(187, 187, 68, 0.2);
+        border-radius: 6px; }
+    section.workshops .box-grid .box p {
+      font-size: 1em;
+      margin: 6px 0; }
 
 section.timeflex div.flextable {
   display: flex;
-  flex-direction: column;
-}
-section.timeflex div.flextable header {
-  display: none;
-}
-section.timeflex div.flextable div.row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: 12px 0;
-  margin-left: 64px;
-  position: relative;
-}
-section.timeflex div.flextable div.row div.when {
-  flex: 0 0 auto;
-  width: 80px;
-  font-size: 0.8em;
-  display: flex;
-  align-items: center;
-}
-section.timeflex div.flextable div.row div.track {
-  padding: 0.5em;
-}
-section.timeflex div.flextable div.row div.UX-track {
-  background-color: #fcf6f3;
-  border-top: 1px solid #f1ebe4;
-}
-section.timeflex div.flextable div.row div.QA-track {
-  background-color: #fcf0e3;
-  border-top: 1px solid #f1ebe4;
-}
-section.timeflex div.flextable div.row div.dev-track {
-  background-color: #e2ddd6;
-  border-top: 1px solid #f1ebe4;
-}
-section.timeflex div.flextable div.row div.who {
-  flex: 1 1 auto;
-  min-width: 200px;
-  font-size: 0.9em;
-  text-transform: uppercase;
-}
-section.timeflex div.flextable div.row div.type {
-  position: absolute;
-  top: 0;
-  left: -64px;
-}
-section.timeflex div.flextable div.row div.type img {
-  width: 50px;
-  padding: 5px;
-}
-section.timeflex div.flextable div.row div.what {
-  flex: 2 2 auto;
-  width: 100%;
-  font-weight: bold;
-}
-section.timeflex div.flextable div.row.food div.type > img {
-  background-color: rgba(187, 187, 68, 0.2);
-}
-section.timeflex div.flextable div.row.speak div.type > img, section.timeflex div.flextable div.row.keynote div.type > img {
-  background-color: rgba(187, 187, 68, 0.2);
-}
-section.timeflex div.flextable div.row.info div.type > img {
-  background-color: rgba(187, 187, 68, 0.2);
-}
-section.timeflex div.flextable div.row.workshop div.type > img {
-  background-color: rgba(187, 187, 68, 0.2);
-}
-section.timeflex div.flextable div.row.break div.type > img, section.timeflex div.flextable div.row.party div.type > img {
-  background-color: rgba(187, 187, 68, 0.2);
-}
-@media screen and (max-width: 780px) {
-  section.timeflex div.flextable div.track {
-    width: 100%;
-  }
-}
-@media screen and (min-width: 780px) {
-  section.timeflex div.flextable header, section.timeflex div.flextable div.row {
-    flex-wrap: nowrap;
-  }
-  section.timeflex div.flextable header div.when, section.timeflex div.flextable div.row div.when {
-    flex: 0 0 auto;
-    width: 120px;
-  }
-  section.timeflex div.flextable header div.type, section.timeflex div.flextable div.row div.type {
-    position: relative;
-    left: 0;
-    flex: 0 0 auto;
-    width: 60px;
-  }
-  section.timeflex div.flextable header div.who, section.timeflex div.flextable div.row div.who {
-    flex: 0 0 auto;
-    width: 200px;
-  }
-  section.timeflex div.flextable header div.what, section.timeflex div.flextable div.row div.what {
-    flex: 1 1 auto;
-    width: auto;
-  }
-  section.timeflex div.flextable header div.track, section.timeflex div.flextable div.row div.track {
-    flex: 1 1 auto;
-    width: 30%;
-  }
+  flex-direction: column; }
   section.timeflex div.flextable header {
+    display: none; }
+  section.timeflex div.flextable div.row {
     display: flex;
     flex-direction: row;
-    height: 48px;
-    margin-bottom: 6px;
-    padding-bottom: 3px;
-    align-items: flex-end;
-    justify-content: flex-start;
-    border-bottom: solid 2px rgba(0, 0, 0, 0.1);
-  }
-  section.timeflex div.flextable header div {
-    font-size: 0.8em;
-    text-transform: uppercase;
-    font-weight: bold;
-  }
-  section.timeflex div.flextable div.row {
-    margin: 0 0 0 0;
-    padding: 0 0 0 0;
-  }
-  section.timeflex div.flextable div.row:nth-child(odd) {
-    background-color: rgba(196, 181, 128, 0.07);
-  }
-  section.timeflex div.flextable div.row div {
-    display: flex;
-    align-items: center;
-    height: 70px;
-  }
-  section.timeflex div.flextable div.row div.type {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  section.timeflex div.flextable div.row div.type img {
-    width: 40px;
-  }
-  section.timeflex div.flextable div.row div.who, section.timeflex div.flextable div.row div.what, section.timeflex div.flextable div.row div.track {
-    text-transform: none;
-    font-size: 1.1rem;
-    font-weight: normal;
-  }
-  section.timeflex div.flextable div.row.speak div.what, section.timeflex div.flextable div.row.speak div.who, section.timeflex div.flextable div.row.speak div.track {
-    font-size: 1.3rem;
-  }
-  section.timeflex div.flextable div.row.keynote div.what, section.timeflex div.flextable div.row.keynote div.who, section.timeflex div.flextable div.row.keynote div.track {
-    font-size: 1.3rem;
-    font-weight: bold;
-  }
-  section.timeflex div.flextable div.row.workshop div.what, section.timeflex div.flextable div.row.workshop div.who, section.timeflex div.flextable div.row.workshop div.track {
-    font-size: 1.3rem;
-  }
-  section.timeflex div.flextable div.row.party, section.timeflex div.flextable div.row.break, section.timeflex div.flextable div.row.info, section.timeflex div.flextable div.row.food {
-    height: 90px;
-    color: rgba(0, 0, 0, 0.8);
-  }
-  section.timeflex div.flextable div.row.party > div, section.timeflex div.flextable div.row.break > div, section.timeflex div.flextable div.row.info > div, section.timeflex div.flextable div.row.food > div {
-    height: 90px;
-  }
-  section.timeflex div.flextable div.row.party div.type > img, section.timeflex div.flextable div.row.break div.type > img, section.timeflex div.flextable div.row.info div.type > img, section.timeflex div.flextable div.row.food div.type > img {
-    width: 30px;
-  }
-}
+    flex-wrap: wrap;
+    margin: 12px 0;
+    margin-left: 64px;
+    position: relative; }
+    section.timeflex div.flextable div.row div.when {
+      flex: 0 0 auto;
+      width: 80px;
+      font-size: 0.8em;
+      display: flex;
+      align-items: center; }
+    section.timeflex div.flextable div.row div.track {
+      padding: 0.5em; }
+    section.timeflex div.flextable div.row div.UX-track {
+      background-color: #fcf6f3;
+      border-top: 1px solid #f1ebe4; }
+    section.timeflex div.flextable div.row div.QA-track {
+      background-color: #fcf0e3;
+      border-top: 1px solid #f1ebe4; }
+    section.timeflex div.flextable div.row div.dev-track {
+      background-color: #e2ddd6;
+      border-top: 1px solid #f1ebe4; }
+    section.timeflex div.flextable div.row div.who {
+      flex: 1 1 auto;
+      min-width: 200px;
+      font-size: 0.9em;
+      text-transform: uppercase; }
+    section.timeflex div.flextable div.row div.type {
+      position: absolute;
+      top: 0;
+      left: -64px; }
+      section.timeflex div.flextable div.row div.type img {
+        width: 50px;
+        padding: 5px; }
+    section.timeflex div.flextable div.row div.what {
+      flex: 2 2 auto;
+      width: 100%;
+      font-weight: bold; }
+    section.timeflex div.flextable div.row.food div.type > img {
+      background-color: rgba(187, 187, 68, 0.2); }
+    section.timeflex div.flextable div.row.speak div.type > img, section.timeflex div.flextable div.row.keynote div.type > img {
+      background-color: rgba(187, 187, 68, 0.2); }
+    section.timeflex div.flextable div.row.info div.type > img {
+      background-color: rgba(187, 187, 68, 0.2); }
+    section.timeflex div.flextable div.row.workshop div.type > img {
+      background-color: rgba(187, 187, 68, 0.2); }
+    section.timeflex div.flextable div.row.break div.type > img, section.timeflex div.flextable div.row.party div.type > img {
+      background-color: rgba(187, 187, 68, 0.2); }
+  @media screen and (max-width: 780px) {
+    section.timeflex div.flextable div.track {
+      width: 100%; } }
+  @media screen and (min-width: 780px) {
+    section.timeflex div.flextable header, section.timeflex div.flextable div.row {
+      flex-wrap: nowrap; }
+      section.timeflex div.flextable header div.when, section.timeflex div.flextable div.row div.when {
+        flex: 0 0 auto;
+        width: 120px; }
+      section.timeflex div.flextable header div.type, section.timeflex div.flextable div.row div.type {
+        position: relative;
+        left: 0;
+        flex: 0 0 auto;
+        width: 60px; }
+      section.timeflex div.flextable header div.who, section.timeflex div.flextable div.row div.who {
+        flex: 0 0 auto;
+        width: 200px; }
+      section.timeflex div.flextable header div.what, section.timeflex div.flextable div.row div.what {
+        flex: 1 1 auto;
+        width: auto; }
+      section.timeflex div.flextable header div.track, section.timeflex div.flextable div.row div.track {
+        flex: 1 1 auto;
+        width: 30%; }
+    section.timeflex div.flextable header {
+      display: flex;
+      flex-direction: row;
+      height: 48px;
+      margin-bottom: 6px;
+      padding-bottom: 3px;
+      align-items: flex-end;
+      justify-content: flex-start;
+      border-bottom: solid 2px rgba(0, 0, 0, 0.1); }
+      section.timeflex div.flextable header div {
+        font-size: 0.8em;
+        text-transform: uppercase;
+        font-weight: bold; }
+    section.timeflex div.flextable div.row {
+      margin: 0 0 0 0;
+      padding: 0 0 0 0; }
+      section.timeflex div.flextable div.row:nth-child(odd) {
+        background-color: rgba(196, 181, 128, 0.07); }
+      section.timeflex div.flextable div.row div {
+        display: flex;
+        align-items: center;
+        height: 70px; }
+        section.timeflex div.flextable div.row div.type {
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          section.timeflex div.flextable div.row div.type img {
+            width: 40px; }
+        section.timeflex div.flextable div.row div.who, section.timeflex div.flextable div.row div.what, section.timeflex div.flextable div.row div.track {
+          text-transform: none;
+          font-size: 1.1rem;
+          font-weight: normal; }
+      section.timeflex div.flextable div.row.speak div.what, section.timeflex div.flextable div.row.speak div.who, section.timeflex div.flextable div.row.speak div.track {
+        font-size: 1.3rem; }
+      section.timeflex div.flextable div.row.keynote div.what, section.timeflex div.flextable div.row.keynote div.who, section.timeflex div.flextable div.row.keynote div.track {
+        font-size: 1.3rem;
+        font-weight: bold; }
+      section.timeflex div.flextable div.row.workshop div.what, section.timeflex div.flextable div.row.workshop div.who, section.timeflex div.flextable div.row.workshop div.track {
+        font-size: 1.3rem; }
+      section.timeflex div.flextable div.row.party, section.timeflex div.flextable div.row.break, section.timeflex div.flextable div.row.info, section.timeflex div.flextable div.row.food {
+        height: 90px;
+        color: rgba(0, 0, 0, 0.8); }
+        section.timeflex div.flextable div.row.party > div, section.timeflex div.flextable div.row.break > div, section.timeflex div.flextable div.row.info > div, section.timeflex div.flextable div.row.food > div {
+          height: 90px; }
+        section.timeflex div.flextable div.row.party div.type > img, section.timeflex div.flextable div.row.break div.type > img, section.timeflex div.flextable div.row.info div.type > img, section.timeflex div.flextable div.row.food div.type > img {
+          width: 30px; } }
 
 section.timetable {
-  padding-bottom: 120px;
-}
-section.timetable table {
-  width: 100%;
-}
-section.timetable table tr td, section.timetable table tr th {
-  padding: 12px 3px;
-}
-section.timetable table tr td:nth-child(2), section.timetable table tr th:nth-child(2) {
-  text-align: center;
-}
-section.timetable table tr .when {
-  width: 120px;
-  text-align: left;
-}
-section.timetable table tr .type {
-  width: 60px;
-  text-align: center;
-}
-section.timetable table tr .who {
-  width: 200px;
-  text-align: left;
-}
-section.timetable table tr .track {
-  width: 30%;
-  text-align: left;
-}
-section.timetable table tr .what {
-  width: auto;
-  text-align: left;
-}
-section.timetable table tbody tr .type-icon {
-  height: 50px;
-  padding: 6px;
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.8);
-}
-section.timetable table tbody tr.info td, section.timetable table tbody tr.break td, section.timetable table tbody tr.food td {
-  padding: 0 3px;
-}
-section.timetable table tbody tr.info td:nth-child(2), section.timetable table tbody tr.break td:nth-child(2), section.timetable table tbody tr.food td:nth-child(2) {
-  text-align: center;
-}
-section.timetable table tbody tr.info td .type-icon, section.timetable table tbody tr.break td .type-icon, section.timetable table tbody tr.food td .type-icon {
-  height: 40px;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-section.timetable table tbody tr.food img.type-icon {
-  height: 40px;
-  background-color: rgba(0, 128, 0, 0.4);
-}
-section.timetable table tbody tr.speak {
-  font-size: 1.3em;
-}
-section.timetable table tbody tr.workshop {
-  font-size: 1.3em;
-}
-section.timetable table tbody tr.keynote {
-  font-size: 1.3em;
-  font-weight: bold;
-}
-section.timetable table tbody tr.party {
-  font-size: 0.8em;
-}
-section.timetable table tbody tr.party img.type-icon {
-  height: 35px;
-}
-section.timetable table tbody tr td:first-of-type {
-  font-size: 1rem;
-  font-weight: normal;
-}
+  padding-bottom: 120px; }
+  section.timetable table {
+    width: 100%; }
+    section.timetable table tr td, section.timetable table tr th {
+      padding: 12px 3px; }
+      section.timetable table tr td:nth-child(2), section.timetable table tr th:nth-child(2) {
+        text-align: center; }
+    section.timetable table tr .when {
+      width: 120px;
+      text-align: left; }
+    section.timetable table tr .type {
+      width: 60px;
+      text-align: center; }
+    section.timetable table tr .who {
+      width: 200px;
+      text-align: left; }
+    section.timetable table tr .track {
+      width: 30%;
+      text-align: left; }
+    section.timetable table tr .what {
+      width: auto;
+      text-align: left; }
+    section.timetable table tbody tr .type-icon {
+      height: 50px;
+      padding: 6px;
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.8); }
+    section.timetable table tbody tr.info td, section.timetable table tbody tr.break td, section.timetable table tbody tr.food td {
+      padding: 0 3px; }
+      section.timetable table tbody tr.info td:nth-child(2), section.timetable table tbody tr.break td:nth-child(2), section.timetable table tbody tr.food td:nth-child(2) {
+        text-align: center; }
+      section.timetable table tbody tr.info td .type-icon, section.timetable table tbody tr.break td .type-icon, section.timetable table tbody tr.food td .type-icon {
+        height: 40px;
+        background-color: rgba(0, 0, 0, 0.4); }
+    section.timetable table tbody tr.food img.type-icon {
+      height: 40px;
+      background-color: rgba(0, 128, 0, 0.4); }
+    section.timetable table tbody tr.speak {
+      font-size: 1.3em; }
+    section.timetable table tbody tr.workshop {
+      font-size: 1.3em; }
+    section.timetable table tbody tr.keynote {
+      font-size: 1.3em;
+      font-weight: bold; }
+    section.timetable table tbody tr.party {
+      font-size: 0.8em; }
+      section.timetable table tbody tr.party img.type-icon {
+        height: 35px; }
+    section.timetable table tbody tr td:first-of-type {
+      font-size: 1rem;
+      font-weight: normal; }
 
 section.location div.image-container {
   width: 100%;
   box-shadow: inset 0 0 20px 2px rgba(0, 0, 0, 0.1);
   padding: 12px;
-  margin: 24px 0;
-}
-section.location div.image-container img {
-  width: 100%;
-}
+  margin: 24px 0; }
+  section.location div.image-container img {
+    width: 100%; }
 section.location h2 {
-  margin: 24px 0 0 0;
-}
+  margin: 24px 0 0 0; }
 section.location p.address {
-  padding: 12px 24px;
-}
+  padding: 12px 24px; }
 
 /*# sourceMappingURL=style.css.map */
