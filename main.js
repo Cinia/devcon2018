@@ -25,7 +25,7 @@
     // Animate logos at the top
     classAnimation([
         document.querySelector("#devconLogo"),
-        document.querySelector("#devconTitle")
+        // document.querySelector("#devconTitle")
     ], 5000);
 
 
